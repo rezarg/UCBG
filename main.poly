@@ -1,0 +1,2986 @@
+{
+  "Version": "2.0.25",
+  "FileType": 0,
+  "Objects": [
+    {
+      "Name": "World",
+      "ClassName": "World",
+      "ID": "",
+      "Properties": {
+        "Tags": []
+      },
+      "Children": [
+        {
+          "Name": "Environment",
+          "ClassName": "Environment",
+          "ID": "c69619c2-884f-4bc8-955f-cffc6113b66f",
+          "Properties": {
+            "Gravity": [
+              0,
+              -85,
+              0
+            ],
+            "PartDestroyHeight": -100,
+            "Tags": []
+          },
+          "Children": [
+            {
+              "Name": "Camera",
+              "ClassName": "Camera",
+              "ID": "aaa76f8a-2883-425c-8fff-d076245e0c2d",
+              "Properties": {
+                "CanLock": true,
+                "MaxDistance": 192,
+                "PositionOffset": [
+                  0,
+                  0,
+                  0
+                ],
+                "RotationOffset": [
+                  -0,
+                  0,
+                  0
+                ],
+                "SensitivityMultiplier": 1,
+                "LocalPosition": [
+                  0,
+                  0,
+                  0
+                ],
+                "LocalRotation": [
+                  0,
+                  -0,
+                  -0
+                ],
+                "LocalSize": [
+                  1,
+                  1,
+                  1
+                ],
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Spawn",
+              "ClassName": "Part",
+              "ID": "cd4fb8a1-e184-4188-ac4d-be81abba8989",
+              "Properties": {
+                "Color": "ffffffff",
+                "Material": 2,
+                "IsSpawn": true,
+                "AngularVelocity": [
+                  0,
+                  0,
+                  0
+                ],
+                "Velocity": [
+                  0,
+                  0,
+                  0
+                ],
+                "Anchored": true,
+                "CanCollide": true,
+                "CollisionLayers": 1,
+                "CollisionMask": 1,
+                "RayPassthrough": 0,
+                "LocalPosition": [
+                  0,
+                  1,
+                  0
+                ],
+                "LocalRotation": [
+                  -0,
+                  0,
+                  0
+                ],
+                "LocalSize": [
+                  5,
+                  1,
+                  5
+                ],
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Connections",
+              "ClassName": "Folder",
+              "ID": "2af995f8-6392-4162-891d-cb7d77714400",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Blocks",
+              "ClassName": "Folder",
+              "ID": "78516509-119e-415c-9044-52668214d579",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Ignore",
+              "ClassName": "Folder",
+              "ID": "c3e327b4-a9d9-4059-913f-91dd569619c1",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [
+                {
+                  "Name": "SelectionBox3D",
+                  "ClassName": "Part",
+                  "ID": "f12ce273-dbb4-4708-a33f-5787ed9a41b1",
+                  "Properties": {
+                    "CastShadows": false,
+                    "Color": "81faff40",
+                    "AngularVelocity": [
+                      0,
+                      -0,
+                      -0
+                    ],
+                    "Velocity": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "Anchored": true,
+                    "CanCollide": false,
+                    "CollisionLayers": 1,
+                    "CollisionMask": 1,
+                    "RayPassthrough": 0,
+                    "LocalPosition": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "LocalRotation": [
+                      -0,
+                      0,
+                      0
+                    ],
+                    "LocalSize": [
+                      1,
+                      1,
+                      1
+                    ],
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "Marker3D",
+                      "ClassName": "Marker3D",
+                      "ID": "0ac3cad5-9885-41e1-976a-23a4c1ab319e",
+                      "Properties": {
+                        "LocalPosition": [
+                          0,
+                          0,
+                          0
+                        ],
+                        "LocalRotation": [
+                          -0,
+                          0,
+                          0
+                        ],
+                        "LocalSize": [
+                          1,
+                          1,
+                          1
+                        ],
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "SelectionFace",
+                  "ClassName": "Model",
+                  "ID": "acded26c-e665-4f1d-8313-a4475ddbc82c",
+                  "Properties": {
+                    "LocalPosition": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "LocalRotation": [
+                      -0,
+                      0,
+                      0
+                    ],
+                    "LocalSize": [
+                      1,
+                      1,
+                      1
+                    ],
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "Part2",
+                      "ClassName": "Part",
+                      "ID": "230f0d1c-3979-4e2a-8f46-835578898ba3",
+                      "Properties": {
+                        "CastShadows": false,
+                        "Color": "81faff40",
+                        "AngularVelocity": [
+                          0,
+                          -0,
+                          -0
+                        ],
+                        "Velocity": [
+                          0,
+                          0,
+                          0
+                        ],
+                        "Anchored": true,
+                        "CanCollide": false,
+                        "CollisionLayers": 1,
+                        "CollisionMask": 1,
+                        "RayPassthrough": 0,
+                        "LocalPosition": [
+                          0,
+                          0.49999985,
+                          -6.9230725E-07
+                        ],
+                        "LocalRotation": [
+                          90,
+                          0,
+                          0
+                        ],
+                        "LocalSize": [
+                          0.95,
+                          0.05,
+                          0.05
+                        ],
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "Part3",
+                      "ClassName": "Part",
+                      "ID": "9c5111ca-03a2-45c6-8a20-c2bfc99e09e8",
+                      "Properties": {
+                        "CastShadows": false,
+                        "Color": "81faff40",
+                        "AngularVelocity": [
+                          0,
+                          -0,
+                          -0
+                        ],
+                        "Velocity": [
+                          0,
+                          0,
+                          0
+                        ],
+                        "Anchored": true,
+                        "CanCollide": false,
+                        "CollisionLayers": 1,
+                        "CollisionMask": 1,
+                        "RayPassthrough": 0,
+                        "LocalPosition": [
+                          0,
+                          -0.50000036,
+                          -7.382042E-07
+                        ],
+                        "LocalRotation": [
+                          90,
+                          0,
+                          0
+                        ],
+                        "LocalSize": [
+                          0.95,
+                          0.05,
+                          0.05
+                        ],
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "Part4",
+                      "ClassName": "Part",
+                      "ID": "8979617f-7520-4a25-b4e3-a79e9602d8ab",
+                      "Properties": {
+                        "CastShadows": false,
+                        "Color": "81faff40",
+                        "AngularVelocity": [
+                          0,
+                          -0,
+                          -0
+                        ],
+                        "Velocity": [
+                          0,
+                          0,
+                          0
+                        ],
+                        "Anchored": true,
+                        "CanCollide": false,
+                        "CollisionLayers": 1,
+                        "CollisionMask": 1,
+                        "RayPassthrough": 0,
+                        "LocalPosition": [
+                          -0.5000001,
+                          2.3841858E-07,
+                          -7.1525574E-07
+                        ],
+                        "LocalRotation": [
+                          90,
+                          0,
+                          0
+                        ],
+                        "LocalSize": [
+                          0.05,
+                          0.05,
+                          1.0500001
+                        ],
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "Part5",
+                      "ClassName": "Part",
+                      "ID": "0b05221f-0682-4bb2-8722-da7dd0976e57",
+                      "Properties": {
+                        "CastShadows": false,
+                        "Color": "81faff40",
+                        "AngularVelocity": [
+                          0,
+                          -0,
+                          -0
+                        ],
+                        "Velocity": [
+                          0,
+                          0,
+                          0
+                        ],
+                        "Anchored": true,
+                        "CanCollide": false,
+                        "CollisionLayers": 1,
+                        "CollisionMask": 1,
+                        "RayPassthrough": 0,
+                        "LocalPosition": [
+                          0.5000001,
+                          2.3841858E-07,
+                          -7.1525574E-07
+                        ],
+                        "LocalRotation": [
+                          90,
+                          0,
+                          0
+                        ],
+                        "LocalSize": [
+                          0.05,
+                          0.05,
+                          1.0500001
+                        ],
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "BlockGhost",
+                  "ClassName": "Part",
+                  "ID": "6254f66e-6c36-40cf-baec-f1a2a1dfb95f",
+                  "Properties": {
+                    "CastShadows": false,
+                    "Color": "ffffff00",
+                    "AngularVelocity": [
+                      0,
+                      -0,
+                      -0
+                    ],
+                    "Velocity": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "Anchored": true,
+                    "CanCollide": false,
+                    "CollisionLayers": 1,
+                    "CollisionMask": 1,
+                    "RayPassthrough": 0,
+                    "LocalPosition": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "LocalRotation": [
+                      -0,
+                      0,
+                      0
+                    ],
+                    "LocalSize": [
+                      1,
+                      1,
+                      1
+                    ],
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                }
+              ],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Baseplate",
+              "ClassName": "Part",
+              "ID": "00dfbee5-3674-4d2e-898f-6435dfa2b39b",
+              "Properties": {
+                "Color": "767e7dff",
+                "Material": 5,
+                "AngularVelocity": [
+                  0,
+                  0,
+                  0
+                ],
+                "Velocity": [
+                  0,
+                  0,
+                  0
+                ],
+                "Anchored": true,
+                "CanCollide": true,
+                "CollisionLayers": 1,
+                "CollisionMask": 1,
+                "RayPassthrough": 0,
+                "LocalPosition": [
+                  -200.25,
+                  0,
+                  -200.25
+                ],
+                "LocalRotation": [
+                  -0,
+                  0,
+                  0
+                ],
+                "LocalSize": [
+                  400.5,
+                  1,
+                  400.5
+                ],
+                "Locked": true,
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Baseplate2",
+              "ClassName": "Part",
+              "ID": "406dc1a4-bf86-48a4-b1c6-329b86a2cd82",
+              "Properties": {
+                "Color": "767e7dff",
+                "Material": 5,
+                "AngularVelocity": [
+                  0,
+                  0,
+                  0
+                ],
+                "Velocity": [
+                  0,
+                  0,
+                  0
+                ],
+                "Anchored": true,
+                "CanCollide": true,
+                "CollisionLayers": 1,
+                "CollisionMask": 1,
+                "RayPassthrough": 0,
+                "LocalPosition": [
+                  200.25,
+                  0,
+                  -200.25
+                ],
+                "LocalRotation": [
+                  -0,
+                  0,
+                  0
+                ],
+                "LocalSize": [
+                  400.5,
+                  1,
+                  400.5
+                ],
+                "Locked": true,
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Baseplate3",
+              "ClassName": "Part",
+              "ID": "a3b70a3a-8689-4283-8ff1-abdb162275a5",
+              "Properties": {
+                "Color": "767e7dff",
+                "Material": 5,
+                "AngularVelocity": [
+                  0,
+                  0,
+                  0
+                ],
+                "Velocity": [
+                  0,
+                  0,
+                  0
+                ],
+                "Anchored": true,
+                "CanCollide": true,
+                "CollisionLayers": 1,
+                "CollisionMask": 1,
+                "RayPassthrough": 0,
+                "LocalPosition": [
+                  -200.25,
+                  0,
+                  200.25
+                ],
+                "LocalRotation": [
+                  -0,
+                  0,
+                  0
+                ],
+                "LocalSize": [
+                  400.5,
+                  1,
+                  400.5
+                ],
+                "Locked": true,
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Baseplate4",
+              "ClassName": "Part",
+              "ID": "37560fa2-7d70-4667-b271-8ea2847ac72f",
+              "Properties": {
+                "Color": "767e7dff",
+                "Material": 5,
+                "AngularVelocity": [
+                  0,
+                  0,
+                  0
+                ],
+                "Velocity": [
+                  0,
+                  0,
+                  0
+                ],
+                "Anchored": true,
+                "CanCollide": true,
+                "CollisionLayers": 1,
+                "CollisionMask": 1,
+                "RayPassthrough": 0,
+                "LocalPosition": [
+                  200.25,
+                  0,
+                  200.25
+                ],
+                "LocalRotation": [
+                  -0,
+                  0,
+                  0
+                ],
+                "LocalSize": [
+                  400.5,
+                  1,
+                  400.5
+                ],
+                "Locked": true,
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            }
+          ],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "Lighting",
+          "ClassName": "Lighting",
+          "ID": "1762c2d0-e6fe-4ace-92b5-4e9a6acb77f0",
+          "Properties": {
+            "AmbientColor": "00000000",
+            "AmbientSource": 0,
+            "FogColor": "00000000",
+            "FogEnabled": false,
+            "FogEndDistance": 0,
+            "FogStartDistance": 0,
+            "Skybox": 0,
+            "Tags": []
+          },
+          "Children": [
+            {
+              "Name": "SunLight",
+              "ClassName": "SunLight",
+              "ID": "5f3df07f-79a2-47fd-9f05-80e088ec16c1",
+              "Properties": {
+                "Brightness": 1,
+                "Color": "fff4d6ff",
+                "Enabled": true,
+                "LightSize": 0,
+                "Shadows": true,
+                "Specular": 0.5,
+                "LocalPosition": [
+                  0,
+                  15,
+                  0
+                ],
+                "LocalRotation": [
+                  49.999992,
+                  -30,
+                  -0
+                ],
+                "LocalSize": [
+                  1,
+                  1,
+                  1
+                ],
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            }
+          ],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "Players",
+          "ClassName": "Players",
+          "ID": "09548ecf-3379-4e5d-978f-d0ae9b3f31f3",
+          "Properties": {
+            "PlayerCollisionEnabled": true,
+            "UseServerAuthority": true,
+            "Tags": []
+          },
+          "Children": [],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "ScriptService",
+          "ClassName": "ScriptService",
+          "ID": "7bbfe189-3d57-4a02-9f1e-0f2277cfe33d",
+          "Properties": {
+            "Tags": []
+          },
+          "Children": [
+            {
+              "Name": "DeleteUserOwned",
+              "ClassName": "BindableEvent",
+              "ID": "a15d1b4f-8537-464d-adc5-bc3a93b78a27",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "DeleteUnowned",
+              "ClassName": "BindableEvent",
+              "ID": "59be5aac-fff3-47e4-a6f5-280eabe9c06b",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "PlaceBlock",
+              "ClassName": "NetworkEvent",
+              "ID": "67eb02a4-1203-4499-9137-ec1eaa3361a1",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Import",
+              "ClassName": "NetworkEvent",
+              "ID": "9972174a-1958-491f-8c6a-fc6d21f2ef00",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "MassDelete",
+              "ClassName": "NetworkEvent",
+              "ID": "669740f9-31bc-49a6-ab7f-bb6a294426ae",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "MassMove",
+              "ClassName": "NetworkEvent",
+              "ID": "0fc52554-57fd-4ec2-b906-7826c2f28012",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "DestroyBlock",
+              "ClassName": "NetworkEvent",
+              "ID": "6870983c-7cbd-46b3-980c-f2dfe4dbd876",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "MakeConnection",
+              "ClassName": "NetworkEvent",
+              "ID": "333c8d1b-87fc-43e1-a7da-4f3b1e8597dc",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "DestroyConnection",
+              "ClassName": "NetworkEvent",
+              "ID": "fc0b8c2a-295b-4f77-9f03-ae364091e330",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "CreateGhost",
+              "ClassName": "NetworkEvent",
+              "ID": "2c91e933-7bf9-4100-af0d-c3bd8ed193b0",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "GetPropertiesByUUID",
+              "ClassName": "NetworkEvent",
+              "ID": "66466c1c-a28c-4bc3-b901-2237a3ee6a1a",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "SetPropertyOfUUID",
+              "ClassName": "NetworkEvent",
+              "ID": "f0cf6f08-b697-4b9d-9a55-e9ad17756f42",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "PulseBlock",
+              "ClassName": "NetworkEvent",
+              "ID": "b150756d-c06d-4f63-a051-880f04f6f652",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Log",
+              "ClassName": "NetworkEvent",
+              "ID": "3476e17e-8866-45ef-921e-0e215da04a8c",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Client",
+              "ClassName": "Folder",
+              "ID": "0ad23d6c-cd95-45f4-a392-6c18c24bf025",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [
+                {
+                  "Name": "Main",
+                  "ClassName": "ClientScript",
+                  "ID": "ee964ab9-fa4d-4777-a265-c82d5fb61597",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "0d0ed4aa-f9e1-40eb-a83f-3adccd456ed3",
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "UIStroke",
+                      "ClassName": "UIStroke",
+                      "ID": "9d917e3c-f097-4763-8cd8-2d66b7a33e6c",
+                      "Properties": {
+                        "Color": "41b2ffff",
+                        "Thickness": {
+                          "Offset": 3,
+                          "Scale": 0
+                        },
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "UIButton",
+                      "ClassName": "UIButton",
+                      "ID": "d720990b-bff7-451b-aa79-80d2c1e6eb3d",
+                      "Properties": {
+                        "AutoSize": true,
+                        "FontSize": 16,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 16,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Text",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1,
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121a1",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0.5,
+                          0.5
+                        ],
+                        "PositionOffset": [
+                          0,
+                          0
+                        ],
+                        "PositionRelative": [
+                          0.5,
+                          0.5
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          0,
+                          0
+                        ],
+                        "SizeRelative": [
+                          1,
+                          1
+                        ],
+                        "Visible": true,
+                        "ZIndex": 0,
+                        "Tags": []
+                      },
+                      "Children": [
+                        {
+                          "Name": "UIAspectRatioRestraint",
+                          "ClassName": "UIAspectRatioRestraint",
+                          "ID": "918aab97-0ac0-4736-8cee-daba70d1442a",
+                          "Properties": {
+                            "AspectRatio": 1,
+                            "DominantAxis": 1,
+                            "ScaleType": 0,
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        },
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "6a66682e-349f-4376-8984-04dd4dab0d11",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 10,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 10,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 10,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 10,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        },
+                        {
+                          "Name": "UILabel",
+                          "ClassName": "UILabel",
+                          "ID": "713808fc-51d9-4396-a900-71af3cce6d5a",
+                          "Properties": {
+                            "AutoSize": false,
+                            "FontSize": 12,
+                            "HorizontalAlignment": 1,
+                            "MaxAutoSize": 0,
+                            "OutlineColor": "000000ff",
+                            "OutlineWidth": 2,
+                            "Text": "[?]",
+                            "TextColor": "ffffffff",
+                            "UseRichText": false,
+                            "VerticalAlignment": 1,
+                            "BorderColor": "000000ff",
+                            "BorderMode": 0,
+                            "BorderWidth": 0,
+                            "Color": "ffffff00",
+                            "CornerRadius": 0,
+                            "ClipDescendants": false,
+                            "IgnoreMouse": true,
+                            "MaskMode": 0,
+                            "PivotPoint": [
+                              0.5,
+                              0.5
+                            ],
+                            "PositionOffset": [
+                              0,
+                              0
+                            ],
+                            "PositionRelative": [
+                              0.5,
+                              0
+                            ],
+                            "Rotation": 0,
+                            "Scale": [
+                              1,
+                              1
+                            ],
+                            "SizeOffset": [
+                              100,
+                              100
+                            ],
+                            "SizeRelative": [
+                              0,
+                              0
+                            ],
+                            "Visible": false,
+                            "ZIndex": 0,
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Log",
+                  "ClassName": "ClientScript",
+                  "ID": "4f6a1992-4d7e-4d04-a42d-561cc6024213",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "02887d3a-bf5d-47a2-931e-58819f93de38",
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Perf",
+                  "ClassName": "ClientScript",
+                  "ID": "fc0f5303-d08d-42e0-8adc-aaaaaefbcaf8",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "d79a1bea-c38c-497f-ab0a-2914012dfdd3",
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Presence",
+                  "ClassName": "ClientScript",
+                  "ID": "e2ae9d45-5e69-49fa-8a85-4e7b019f4caf",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "bb02afcf-d16a-4d55-97d8-bf9a0b1fa4e6",
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                }
+              ],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Server",
+              "ClassName": "Folder",
+              "ID": "7c3d42c4-51ed-43d8-b235-f97d67a42138",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [
+                {
+                  "Name": "Main",
+                  "ClassName": "ServerScript",
+                  "ID": "a4d36de7-c5e6-4c23-8c11-9b7c13c7f6fe",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "dc88d734-60b6-4693-9706-426dd9d3e5a4",
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "VersionGetter",
+                  "ClassName": "ServerScript",
+                  "ID": "0d9e2a0a-19d8-41d0-ab30-2b2a027fe2f4",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "0a5404d3-f799-4d6d-8199-e74159b380a3",
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Safety",
+                  "ClassName": "ServerScript",
+                  "ID": "e21d81c8-962f-4121-b355-3aac8c4f4166",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "42e09f55-a183-4e4d-84e0-0ff98d679ff4",
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Chat",
+                  "ClassName": "ServerScript",
+                  "ID": "bb876ea1-0449-42e9-8b15-e75e0c4f017e",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "1c48283b-0e0b-4e96-94d4-a2b17fc36c65",
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Version",
+                  "ClassName": "ModuleScript",
+                  "ID": "b9c9d2eb-98a5-481d-a938-d8f234ec7687",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "e8bd263c-b608-47b7-93c1-4f6871b2d692",
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Achievements",
+                  "ClassName": "ServerScript",
+                  "ID": "6927a590-985a-45a7-9a43-e6da90723073",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "315d40da-893f-4377-be57-c6aeb0b43e31",
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                }
+              ],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Blocks",
+              "ClassName": "ModuleScript",
+              "ID": "49e7afe9-05c3-4fbc-8685-05729b68b72e",
+              "Properties": {
+                "Compatibility": false,
+                "IsEnabled": true,
+                "LinkedScript": "39f8d1f5-1a53-4b14-a816-a5284df0ea09",
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Tools",
+              "ClassName": "ModuleScript",
+              "ID": "3ba22d19-c9be-4d99-a006-1956557918cc",
+              "Properties": {
+                "Compatibility": false,
+                "IsEnabled": true,
+                "LinkedScript": "36b94d5e-ddd0-4397-ae9f-5987529493f9",
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Admins",
+              "ClassName": "ModuleScript",
+              "ID": "0ea103e8-9e1e-4d6d-8cb3-7b60cc859b18",
+              "Properties": {
+                "Compatibility": false,
+                "IsEnabled": true,
+                "LinkedScript": "793f07ce-3368-4313-ba05-58670f00dada",
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "GeneticEngineering",
+              "ClassName": "NetworkEvent",
+              "ID": "e403ade8-564f-43c3-9eea-d590c9a411b7",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "ShortCircuit",
+              "ClassName": "NetworkEvent",
+              "ID": "c16646d0-53fb-4bf2-8465-96b739b0b45d",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            }
+          ],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "Hidden",
+          "ClassName": "Hidden",
+          "ID": "0d679556-4fb7-4b03-81e0-4aa655c11b3f",
+          "Properties": {
+            "Tags": []
+          },
+          "Children": [
+            {
+              "Name": "Connection",
+              "ClassName": "Part",
+              "ID": "c9c77926-436b-466d-b2ad-bdb0a1d5abc7",
+              "Properties": {
+                "CastShadows": false,
+                "Color": "292929ba",
+                "AngularVelocity": [
+                  0,
+                  -0,
+                  -0
+                ],
+                "Velocity": [
+                  0,
+                  0,
+                  0
+                ],
+                "Anchored": true,
+                "CanCollide": false,
+                "CollisionLayers": 1,
+                "CollisionMask": 1,
+                "RayPassthrough": 0,
+                "LocalPosition": [
+                  -26,
+                  1,
+                  -11
+                ],
+                "LocalRotation": [
+                  -0,
+                  0,
+                  0
+                ],
+                "LocalSize": [
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "Tags": []
+              },
+              "Children": [
+                {
+                  "Name": "Direction",
+                  "ClassName": "Text3D",
+                  "ID": "ce8658a8-6046-452e-a54c-005dd76d6e73",
+                  "Properties": {
+                    "Color": "ffffffc0",
+                    "FaceCamera": false,
+                    "FixedSize": false,
+                    "FontAsset": "39df2721-89a9-4033-82aa-68fd892c3064",
+                    "FontSize": 15,
+                    "HorizontalAlignment": 1,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "\u003E",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1,
+                    "Visible": true,
+                    "LocalPosition": [
+                      0,
+                      0.51,
+                      0
+                    ],
+                    "LocalRotation": [
+                      -90,
+                      90,
+                      0
+                    ],
+                    "LocalSize": [
+                      0.9999999,
+                      1,
+                      1.0000001
+                    ],
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Owner",
+                  "ClassName": "InstanceValue",
+                  "ID": "10f4aa50-8125-43ca-8162-99226ce37ac1",
+                  "Properties": {
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                }
+              ],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Property",
+              "ClassName": "UIView",
+              "ID": "b2c0b9d9-8b99-4a87-9963-e81f674109ee",
+              "Properties": {
+                "BorderColor": "000000ff",
+                "BorderMode": 0,
+                "BorderWidth": 0,
+                "Color": "0000001d",
+                "CornerRadius": 0,
+                "ClipDescendants": false,
+                "IgnoreMouse": false,
+                "MaskMode": 0,
+                "PivotPoint": [
+                  0.5,
+                  0.5
+                ],
+                "PositionOffset": [
+                  0,
+                  0
+                ],
+                "PositionRelative": [
+                  0.5,
+                  0.5
+                ],
+                "Rotation": 0,
+                "Scale": [
+                  1,
+                  1
+                ],
+                "SizeOffset": [
+                  0,
+                  40
+                ],
+                "SizeRelative": [
+                  1,
+                  0
+                ],
+                "Visible": true,
+                "ZIndex": 0,
+                "Tags": []
+              },
+              "Children": [
+                {
+                  "Name": "UILabel",
+                  "ClassName": "UILabel",
+                  "ID": "a78ea7fe-2baf-434d-8f9b-c957d81a4b7a",
+                  "Properties": {
+                    "AutoSize": true,
+                    "FontSize": 16,
+                    "HorizontalAlignment": 2,
+                    "MaxAutoSize": 16,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "Property",
+                    "TextColor": "ffffffff",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1,
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "ffffff00",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      1,
+                      0.5
+                    ],
+                    "PositionOffset": [
+                      0,
+                      0
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0.5
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      -10,
+                      0
+                    ],
+                    "SizeRelative": [
+                      0.5,
+                      1
+                    ],
+                    "Visible": true,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "UITextInput",
+                  "ClassName": "UITextInput",
+                  "ID": "50561909-f2e6-40a9-9c1d-feb5e2c85037",
+                  "Properties": {
+                    "AutoSize": true,
+                    "FontSize": 16,
+                    "JustifyText": 0,
+                    "MaxAutoSize": 16,
+                    "MultiLine": false,
+                    "Placeholder": "Type",
+                    "PlaceholderColor": "a7a7a78a",
+                    "ReadOnly": false,
+                    "ReadOnlyColor": "00000033",
+                    "Text": "0",
+                    "TextColor": "ffffffff",
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "ffffff00",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0,
+                      0.5
+                    ],
+                    "PositionOffset": [
+                      0,
+                      0
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0.5
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      -20,
+                      0
+                    ],
+                    "SizeRelative": [
+                      0.5,
+                      1
+                    ],
+                    "Visible": true,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                }
+              ],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "PropertyReadOnly",
+              "ClassName": "UIView",
+              "ID": "89952e99-be1e-4677-a47c-76f69f35782f",
+              "Properties": {
+                "BorderColor": "000000ff",
+                "BorderMode": 0,
+                "BorderWidth": 0,
+                "Color": "0000001d",
+                "CornerRadius": 0,
+                "ClipDescendants": false,
+                "IgnoreMouse": false,
+                "MaskMode": 0,
+                "PivotPoint": [
+                  0.5,
+                  0.5
+                ],
+                "PositionOffset": [
+                  0,
+                  0
+                ],
+                "PositionRelative": [
+                  0.5,
+                  0.5
+                ],
+                "Rotation": 0,
+                "Scale": [
+                  1,
+                  1
+                ],
+                "SizeOffset": [
+                  0,
+                  40
+                ],
+                "SizeRelative": [
+                  1,
+                  0
+                ],
+                "Visible": true,
+                "ZIndex": 0,
+                "Tags": []
+              },
+              "Children": [
+                {
+                  "Name": "Left",
+                  "ClassName": "UILabel",
+                  "ID": "f3634c92-9d19-43c2-8110-49305a7107f9",
+                  "Properties": {
+                    "AutoSize": true,
+                    "FontSize": 16,
+                    "HorizontalAlignment": 2,
+                    "MaxAutoSize": 16,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "Label",
+                    "TextColor": "ffffff8e",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1,
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "ffffff00",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      1,
+                      0.5
+                    ],
+                    "PositionOffset": [
+                      0,
+                      0
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0.5
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      -10,
+                      0
+                    ],
+                    "SizeRelative": [
+                      0.5,
+                      1
+                    ],
+                    "Visible": true,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Right",
+                  "ClassName": "UILabel",
+                  "ID": "e2faaa58-ddec-4b04-9dd4-7e69e80a3fab",
+                  "Properties": {
+                    "AutoSize": true,
+                    "FontSize": 16,
+                    "HorizontalAlignment": 0,
+                    "MaxAutoSize": 16,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "Label",
+                    "TextColor": "ffffff8e",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1,
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "ffffff00",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0,
+                      0.5
+                    ],
+                    "PositionOffset": [
+                      0,
+                      0
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0.5
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      -10,
+                      0
+                    ],
+                    "SizeRelative": [
+                      0.5,
+                      1
+                    ],
+                    "Visible": true,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                }
+              ],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "BlockLabel",
+              "ClassName": "Text3D",
+              "ID": "101e46d7-9f51-44c5-9cb0-3dc3daa77f34",
+              "Properties": {
+                "Color": "ffffffff",
+                "FaceCamera": true,
+                "FixedSize": false,
+                "FontSize": 10,
+                "HorizontalAlignment": 1,
+                "OutlineColor": "000000ff",
+                "OutlineWidth": 0,
+                "Text": "Text",
+                "UseRichText": true,
+                "VerticalAlignment": 1,
+                "Visible": true,
+                "LocalPosition": [
+                  10,
+                  3,
+                  12
+                ],
+                "LocalRotation": [
+                  -0,
+                  0,
+                  0
+                ],
+                "LocalSize": [
+                  1,
+                  1,
+                  1
+                ],
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "CulledConnections",
+              "ClassName": "Folder",
+              "ID": "81d942ce-8a6b-490e-a732-c14dcd925a76",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            }
+          ],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "ServerHidden",
+          "ClassName": "ServerHidden",
+          "ID": "f06e5214-7aec-451a-925f-61b357d661eb",
+          "Properties": {
+            "Tags": []
+          },
+          "Children": [],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "PlayerDefaults",
+          "ClassName": "PlayerDefaults",
+          "ID": "2967441f-e3ec-4b39-ac41-f1e78b4f8b49",
+          "Properties": {
+            "AutoLoadAppearance": true,
+            "CanMove": true,
+            "ChatColor": "ffffffff",
+            "ChatColorsEnabled": true,
+            "JumpPower": 36,
+            "KeepInventory": false,
+            "LoadAppearanceTools": false,
+            "MaxHealth": 100,
+            "MaxStamina": 3,
+            "MovementMode": 0,
+            "RespawnTime": 5,
+            "SprintSpeed": 40,
+            "Stamina": 0,
+            "StaminaBurn": 1.2,
+            "StaminaEnabled": false,
+            "StaminaRegen": 1.2,
+            "UseBubbleChat": true,
+            "UseHeadTurning": true,
+            "UseStamina": false,
+            "WalkSpeed": 16,
+            "Tags": []
+          },
+          "Children": [
+            {
+              "Name": "Inventory",
+              "ClassName": "Inventory",
+              "ID": "3eea1a9c-a2cd-4666-998f-a5238187e8d6",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            }
+          ],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "PlayerGUI",
+          "ClassName": "PlayerGUI",
+          "ID": "9b983163-ad2a-4172-a941-9ee4f18ccb2f",
+          "Properties": {
+            "Tags": []
+          },
+          "Children": [
+            {
+              "Name": "Main",
+              "ClassName": "GUI",
+              "ID": "2ef23cbe-0dae-4f17-b14a-d97e95742b30",
+              "Properties": {
+                "AvoidCoreUI": false,
+                "Visible": true,
+                "ZIndex": 0,
+                "Tags": []
+              },
+              "Children": [
+                {
+                  "Name": "Toolbars",
+                  "ClassName": "UIVLayout",
+                  "ID": "4d998473-2d04-4f8d-bce8-1e3a3e435949",
+                  "Properties": {
+                    "ChildAlignment": 2,
+                    "Spacing": 10,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": true,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0.5,
+                      1
+                    ],
+                    "PositionOffset": [
+                      0,
+                      -20
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      1
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      0,
+                      0
+                    ],
+                    "SizeRelative": [
+                      1,
+                      0.35
+                    ],
+                    "Visible": true,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "Tools",
+                      "ClassName": "UIHLayout",
+                      "ID": "b3d21f9d-cd15-4e24-853b-94337fba25d2",
+                      "Properties": {
+                        "ChildAlignment": 1,
+                        "Spacing": 5,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": true,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0.5,
+                          1
+                        ],
+                        "PositionOffset": [
+                          0,
+                          -110
+                        ],
+                        "PositionRelative": [
+                          0.5,
+                          1
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          0,
+                          0
+                        ],
+                        "SizeRelative": [
+                          0.65,
+                          0.135
+                        ],
+                        "Visible": true,
+                        "ZIndex": 0,
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "Blocks",
+                      "ClassName": "UIHFlow",
+                      "ID": "324303e2-6d57-4565-9c02-4ae0ac469db0",
+                      "Properties": {
+                        "ChildAlignment": 1,
+                        "Spacing": 5,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": true,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0.5,
+                          1
+                        ],
+                        "PositionOffset": [
+                          0,
+                          -20
+                        ],
+                        "PositionRelative": [
+                          0.5,
+                          1
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          0,
+                          0
+                        ],
+                        "SizeRelative": [
+                          0.65,
+                          0.135
+                        ],
+                        "Visible": true,
+                        "ZIndex": 0,
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "InspectPanel",
+                  "ClassName": "UIView",
+                  "ID": "6dc76a7b-bef1-49e9-bbf2-6fb9de343b8f",
+                  "Properties": {
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "212121a1",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": true,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      1,
+                      0.5
+                    ],
+                    "PositionOffset": [
+                      -20,
+                      0
+                    ],
+                    "PositionRelative": [
+                      1,
+                      0.5
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      350,
+                      500
+                    ],
+                    "SizeRelative": [
+                      0,
+                      0
+                    ],
+                    "Visible": false,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "UICorner",
+                      "ClassName": "UICorner",
+                      "ID": "84e4da22-88e0-4aa2-8ca4-a932cfc1b7bb",
+                      "Properties": {
+                        "BottomLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "BottomRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "UIVLayout",
+                      "ClassName": "UIVLayout",
+                      "ID": "56dcb8d5-d6ba-4356-b6e8-5378c32b3144",
+                      "Properties": {
+                        "Spacing": 5,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0.5,
+                          0.5
+                        ],
+                        "PositionOffset": [
+                          0,
+                          0
+                        ],
+                        "PositionRelative": [
+                          0.5,
+                          0.5
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          0,
+                          -20
+                        ],
+                        "SizeRelative": [
+                          1,
+                          1
+                        ],
+                        "Visible": true,
+                        "ZIndex": 0,
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "ExportSelection",
+                  "ClassName": "UIButton",
+                  "ID": "6c857a78-da7b-473d-893d-6de3af4938ae",
+                  "Properties": {
+                    "AutoSize": true,
+                    "FontSize": 16,
+                    "HorizontalAlignment": 1,
+                    "MaxAutoSize": 16,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "Export Selection",
+                    "TextColor": "ffffffff",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1,
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "212121a1",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0.5,
+                      0
+                    ],
+                    "PositionOffset": [
+                      0,
+                      20
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      200,
+                      30
+                    ],
+                    "SizeRelative": [
+                      0,
+                      0
+                    ],
+                    "Visible": false,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "UICorner",
+                      "ClassName": "UICorner",
+                      "ID": "3d66b7b9-9ec2-40a2-aff6-5ab2161282ea",
+                      "Properties": {
+                        "BottomLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "BottomRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "DeleteSelection",
+                  "ClassName": "UIButton",
+                  "ID": "f2e536f4-4ac0-445f-8a44-67a64e8f6f90",
+                  "Properties": {
+                    "AutoSize": true,
+                    "FontSize": 16,
+                    "HorizontalAlignment": 1,
+                    "MaxAutoSize": 16,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "Delete Selection",
+                    "TextColor": "ffffffff",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1,
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "212121a1",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0.5,
+                      0
+                    ],
+                    "PositionOffset": [
+                      0,
+                      60
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      200,
+                      30
+                    ],
+                    "SizeRelative": [
+                      0,
+                      0
+                    ],
+                    "Visible": false,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "UICorner",
+                      "ClassName": "UICorner",
+                      "ID": "071dc56e-6a84-40a7-831a-4ddf63948799",
+                      "Properties": {
+                        "BottomLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "BottomRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "ExportBox",
+                  "ClassName": "UITextInput",
+                  "ID": "94e5e6ba-ed10-499b-b24a-db7308d50484",
+                  "Properties": {
+                    "AutoSize": false,
+                    "FontSize": 12,
+                    "JustifyText": 1,
+                    "MaxAutoSize": 12,
+                    "MultiLine": false,
+                    "Placeholder": "Export Code Will Appear Here.",
+                    "PlaceholderColor": "ffffff75",
+                    "ReadOnly": false,
+                    "ReadOnlyColor": "00000033",
+                    "Text": "",
+                    "TextColor": "ffffffff",
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "00000022",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0.5,
+                      0.5
+                    ],
+                    "PositionOffset": [
+                      0,
+                      0
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0.5
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      0,
+                      0
+                    ],
+                    "SizeRelative": [
+                      0.5,
+                      0.2
+                    ],
+                    "Visible": false,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "UICorner",
+                      "ClassName": "UICorner",
+                      "ID": "97c3e22e-4b05-4ddf-b4cd-c5934eaac395",
+                      "Properties": {
+                        "BottomLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "BottomRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "UILabel",
+                      "ClassName": "UILabel",
+                      "ID": "db0b1c3a-a1c0-4121-88c5-70b82a68fd44",
+                      "Properties": {
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 0,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 3,
+                        "Text": "Ctrl\u002BA to Select All, Ctrl\u002BC to Copy. Save it for later.",
+                        "TextColor": "ffffffa2",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1,
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "00000000",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0.5,
+                          1
+                        ],
+                        "PositionOffset": [
+                          0,
+                          -5
+                        ],
+                        "PositionRelative": [
+                          0.5,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          0,
+                          30
+                        ],
+                        "SizeRelative": [
+                          1,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 0,
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "SelectionBox",
+                  "ClassName": "UIView",
+                  "ID": "62fc59fd-9678-4fae-9b21-af2f249c4815",
+                  "Properties": {
+                    "BorderColor": "44627eff",
+                    "BorderMode": 0,
+                    "BorderWidth": 2,
+                    "Color": "9cf5ff73",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": true,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0,
+                      0
+                    ],
+                    "PositionOffset": [
+                      0,
+                      0
+                    ],
+                    "PositionRelative": [
+                      0,
+                      0
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      0,
+                      0
+                    ],
+                    "SizeRelative": [
+                      0,
+                      0
+                    ],
+                    "Visible": false,
+                    "ZIndex": -1,
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "ImportBox",
+                  "ClassName": "UITextInput",
+                  "ID": "a9b038d1-65dd-4939-a8c0-2c1f1c5999f1",
+                  "Properties": {
+                    "AutoSize": false,
+                    "FontSize": 12,
+                    "JustifyText": 1,
+                    "MaxAutoSize": 12,
+                    "MultiLine": false,
+                    "Placeholder": "Paste your Import Code Here.",
+                    "PlaceholderColor": "ffffff75",
+                    "ReadOnly": false,
+                    "ReadOnlyColor": "00000033",
+                    "Text": "",
+                    "TextColor": "ffffffff",
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "00000022",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0.5,
+                      0.5
+                    ],
+                    "PositionOffset": [
+                      0,
+                      0
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0.5
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      0,
+                      0
+                    ],
+                    "SizeRelative": [
+                      0.5,
+                      0.2
+                    ],
+                    "Visible": false,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "UICorner",
+                      "ClassName": "UICorner",
+                      "ID": "035e1339-2a7c-4c0b-ad2e-d289ad66a507",
+                      "Properties": {
+                        "BottomLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "BottomRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "ImportButton",
+                      "ClassName": "UIButton",
+                      "ID": "b8995972-694a-4269-b270-cb5e47d66ce9",
+                      "Properties": {
+                        "AutoSize": true,
+                        "FontSize": 16,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 16,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Import",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1,
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121a1",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0.5,
+                          0
+                        ],
+                        "PositionOffset": [
+                          0,
+                          20
+                        ],
+                        "PositionRelative": [
+                          0.5,
+                          1
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          200,
+                          30
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 0,
+                        "Tags": []
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "d353476a-b52b-4c13-9de2-f369c42ca1a7",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 10,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 10,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 10,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 10,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "AcceptMove",
+                  "ClassName": "UIButton",
+                  "ID": "a20e68b6-03dd-4528-91f5-24c3c37af89d",
+                  "Properties": {
+                    "AutoSize": true,
+                    "FontSize": 16,
+                    "HorizontalAlignment": 1,
+                    "MaxAutoSize": 16,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "Apply",
+                    "TextColor": "ffffffff",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1,
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "212121a1",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0.5,
+                      0
+                    ],
+                    "PositionOffset": [
+                      0,
+                      20
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      200,
+                      30
+                    ],
+                    "SizeRelative": [
+                      0,
+                      0
+                    ],
+                    "Visible": false,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "UICorner",
+                      "ClassName": "UICorner",
+                      "ID": "5d85d27a-ca6f-46cb-a004-087d41134267",
+                      "Properties": {
+                        "BottomLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "BottomRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "AcceptImport",
+                  "ClassName": "UIButton",
+                  "ID": "3d0a9a64-220a-44c6-ad27-3068c51c7c5e",
+                  "Properties": {
+                    "AutoSize": true,
+                    "FontSize": 16,
+                    "HorizontalAlignment": 1,
+                    "MaxAutoSize": 16,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "Apply",
+                    "TextColor": "ffffffff",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1,
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "212121a1",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0.5,
+                      0
+                    ],
+                    "PositionOffset": [
+                      0,
+                      20
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      200,
+                      30
+                    ],
+                    "SizeRelative": [
+                      0,
+                      0
+                    ],
+                    "Visible": false,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "UICorner",
+                      "ClassName": "UICorner",
+                      "ID": "d7a89ee8-50c9-4a19-8ad5-9a7a6d1d383c",
+                      "Properties": {
+                        "BottomLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "BottomRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopLeftRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "TopRightRadius": {
+                          "Offset": 10,
+                          "Scale": 0
+                        },
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "TopbarText",
+                  "ClassName": "UILabel",
+                  "ID": "511ec398-e02e-410b-8f7c-d26b80e20aeb",
+                  "Properties": {
+                    "AutoSize": false,
+                    "FontSize": 16,
+                    "HorizontalAlignment": 1,
+                    "MaxAutoSize": 0,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "",
+                    "TextColor": "ffffffba",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1,
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "ffffff00",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": true,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0.5,
+                      0
+                    ],
+                    "PositionOffset": [
+                      0,
+                      100
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      0,
+                      30
+                    ],
+                    "SizeRelative": [
+                      0.5,
+                      0
+                    ],
+                    "Visible": true,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                }
+              ],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Settings",
+              "ClassName": "GUI",
+              "ID": "0ef3a28a-bb0b-49df-b66c-0cfd0be3930a",
+              "Properties": {
+                "AvoidCoreUI": false,
+                "Visible": false,
+                "ZIndex": 0,
+                "Tags": []
+              },
+              "Children": [
+                {
+                  "Name": "UIButton",
+                  "ClassName": "UIButton",
+                  "ID": "b7f1ad45-8717-4743-92b1-9daa863104a1",
+                  "Properties": {
+                    "AutoSize": false,
+                    "FontAsset": "bf5ba108-5161-4a41-bef1-d45b0833c4d0",
+                    "FontSize": 13,
+                    "HorizontalAlignment": 1,
+                    "MaxAutoSize": 0,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "Settings",
+                    "TextColor": "ffffffff",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1,
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "00000080",
+                    "CornerRadius": 10,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0.5,
+                      0
+                    ],
+                    "PositionOffset": [
+                      0,
+                      20
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      150,
+                      35
+                    ],
+                    "SizeRelative": [
+                      0,
+                      0
+                    ],
+                    "Visible": false,
+                    "ZIndex": 0,
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                }
+              ],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            }
+          ],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "Achievements",
+          "ClassName": "AchievementsService",
+          "ID": "e257451b-c674-41b0-905e-eead37540c1e",
+          "Properties": {
+            "NotifyAchievements": true,
+            "UseAchievementSound": true,
+            "Tags": []
+          },
+          "Children": [],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "CoreUI",
+          "ClassName": "CoreUIService",
+          "ID": "1e50f39e-881b-4444-b137-2b90385018a5",
+          "Properties": {
+            "CanRespawn": true,
+            "ChatBubbleRenderDistance": 50,
+            "CtrlLockCursor": 5,
+            "UseBackpack": false,
+            "UseChat": true,
+            "UseEmoteWheel": true,
+            "UseHealthBar": false,
+            "UseHotbar": false,
+            "UseLeaderboard": true,
+            "UseMenuButton": true,
+            "UseUserCard": true,
+            "Tags": []
+          },
+          "Children": [],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "Stats",
+          "ClassName": "Stats",
+          "ID": "05205f75-a403-426b-9503-0fb5feab9db6",
+          "Properties": {
+            "Tags": []
+          },
+          "Children": [],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "Teams",
+          "ClassName": "Teams",
+          "ID": "836697c7-cfc5-4f7f-ae74-9b867588f1ce",
+          "Properties": {
+            "Tags": []
+          },
+          "Children": [],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        },
+        {
+          "Name": "Capture",
+          "ClassName": "CaptureService",
+          "ID": "02218c9b-7e93-45cb-9d7f-edd9ab73be5c",
+          "Properties": {
+            "CanCapture": true,
+            "Tags": []
+          },
+          "Children": [],
+          "LinkedModel": null,
+          "IsLinkedChild": false
+        }
+      ],
+      "LinkedModel": null,
+      "IsLinkedChild": false
+    }
+  ],
+  "NonInstanceObjects": [
+    {
+      "Name": "BuiltInFontAsset",
+      "ClassName": "BuiltInFontAsset",
+      "ID": "39df2721-89a9-4033-82aa-68fd892c3064",
+      "Properties": {
+        "FontPreset": 5,
+        "FontStyle": 0,
+        "FontWeight": 3
+      },
+      "Children": [],
+      "LinkedModel": null,
+      "IsLinkedChild": false
+    },
+    {
+      "Name": "BuiltInFontAsset2",
+      "ClassName": "BuiltInFontAsset",
+      "ID": "bf5ba108-5161-4a41-bef1-d45b0833c4d0",
+      "Properties": {
+        "FontPreset": 3,
+        "FontStyle": 0,
+        "FontWeight": 3
+      },
+      "Children": [],
+      "LinkedModel": null,
+      "IsLinkedChild": false
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+name: Deploy
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+              with:
+                path: ./project
+            - uses: little-meow-meow/polytoria-deploy@main
+              with:
+                creator-token: ${{ secrets.CREATOR_TOKEN }}
+                project-path: $GITHUB_WORKSPACE/project
+                place-id: 140234
+            - uses: little-meow-meow/polytoria-deploy@main
+              with:
+                creator-token: ${{ secrets.CREATOR_TOKEN }}
+                project-path: $GITHUB_WORKSPACE/project
+                place-id: 144741
