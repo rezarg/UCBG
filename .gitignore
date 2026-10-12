@@ -1,6 +1,3 @@
 # Polytoria specific ignores
 .poly/
 toolbox/
-
-# Private Source
-scripts/modules/Admins.luau
