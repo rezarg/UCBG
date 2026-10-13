@@ -1,3 +1,6 @@
+# Workflow to automatically publish releases to Polytoria
+# See https://github.com/little-meow-meow/polytoria-deploy for more info
+
 name: Deploy
 
 on:
@@ -15,9 +18,9 @@ jobs:
               with:
                 creator-token: ${{ secrets.CREATOR_TOKEN }}
                 project-path: $GITHUB_WORKSPACE/project
-                place-id: 140234
+                place-id: 140234 # Community World
             - uses: little-meow-meow/polytoria-deploy@main
               with:
                 creator-token: ${{ secrets.CREATOR_TOKEN }}
                 project-path: $GITHUB_WORKSPACE/project
-                place-id: 144741
+                place-id: 144741 # Single-player World
