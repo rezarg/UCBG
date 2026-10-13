@@ -9,4 +9,4 @@ Below is a list of basic guidelines to follow when writing code you'd like to be
 * "Class" tables should be named in PascalCase, i.e. `local Block = {}`.
 * Class properties should be named in PascalCase, i.e. `BlockDef.BindShifted`.
 
-###### Note: My styling isn't perfectly consistent, so if you notice an error with these in the source code, make an Issue about it and I'll fix it, or a PR if you want to fix it yourself. If you need more clarification on something I might not have listed here, let me know in the Discord server, or make an Issue.
+###### Note: My styling isn't perfectly consistent, so if you notice an error with these in the source code, make an Issue about it and I'll fix it, or a PR if you want to fix it yourself. If you need more clarification on something I might not have listed here, let me know in the Discord server or make an Issue, and I can update this document.
