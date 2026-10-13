@@ -8,8 +8,16 @@ You can join the official Discord server here: https://discord.com/invite/d2c8TZ
 UCBG uses [PTDeploy](https://github.com/little-meow-meow/polytoria-deploy), a workflow that automatically uploads releases to Polytoria. <br>
 You can view the workflow [here](https://github.com/little-meow-meow/polytoria-deploy) and the UCBG usage [here](.github/workflows/deploy.yml).
 
-### Contributions & Licensing
+### Contributing
 UCBG is open to contributions, and encourages users to make Pull Requests! <br>
 For more information, view [CONTRIBUTING.md](CONTRIBUTING.md).
 
+### Licensing & Cloning / Forking
 UCBG Source is provided under the [AGPL-3.0 License](https://www.gnu.org/licenses/agpl-3.0.en.html#license-text)
+
+As per AGPL-3.0, anyone is allowed to Clone/Fork UCBG, as long as their copy is ALSO open-source under AGPL-3.0.
+
+I'm not going to be super strict about the licensing, so if you do make private forks, I'm not gonna come hunt you down or anything, but if
+someone requests the source-code for your game, you do legally have to provide it.
+
+Again, I'm not gonna be super strict about it, but I just wanted to clear that up so people are aware of it. <br>
