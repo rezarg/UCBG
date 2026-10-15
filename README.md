@@ -17,7 +17,14 @@ UCBG Source is provided under the [AGPL-3.0 License](https://www.gnu.org/license
 
 As per AGPL-3.0, anyone is allowed to Clone/Fork UCBG, as long as their copy is ALSO open-source under AGPL-3.0.
 
-I'm not going to be super strict about the licensing, so if you do make private forks, I'm not gonna come hunt you down or anything, but if
-someone requests the source-code for your game, you do legally have to provide it.
+I'm not going to be super strict about the licensing, so if you do make local copies and someone requests the source-code for your game,
+you are required to provide it. Because of that, I would highly recommend making a Fork of UCBG so it's publicly available on GitHub, and
+using Visual Studio Code or Git to push all of your changes to your public repo.
 
-Again, I'm not gonna be super strict about it, but I just wanted to clear that up so people are aware of it. <br>
+___
+
+Last but not least,
+
+![UCBG Thumbnail](ucbg-thumbnail.png)
+
+Make stuff, twin.
