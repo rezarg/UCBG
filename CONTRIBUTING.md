@@ -1,4 +1,7 @@
 ## Contributing
+
+**[VISUAL STUDIO CODE](https://code.visualstudio.com/download) IS HIGHLY RECOMMENDED DUE TO EASY ACCESS TO EXTENSIONS AND GIT**
+
 Below is a list of basic guidelines to follow when writing code you'd like to be merged into UCBG:
 
 * Use the StyLua formatter. If you're using VSCode, you can find the extension [here](https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.stylua). For more information on StyLua, see [StyLua](https://github.com/JohnnyMorganz/StyLua).
