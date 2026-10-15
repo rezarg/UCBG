@@ -25,6 +25,4 @@ ___
 
 Last but not least,
 
-![UCBG Thumbnail](ucbg-thumbnail.png)
-
-Make stuff, twin.
+!["Make stuff, twin"](ucbg-mst-banner.png)
