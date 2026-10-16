@@ -1257,6 +1257,20 @@
               "Children": [],
               "LinkedModel": null,
               "IsLinkedChild": false
+            },
+            {
+              "Name": "Achievements",
+              "ClassName": "ModuleScript",
+              "ID": "afda7ab8-e5b9-430d-8b7d-2e7f7c51f41d",
+              "Properties": {
+                "Compatibility": false,
+                "IsEnabled": true,
+                "LinkedScript": "b234dc17-38da-4569-8e1e-4426dcfdc974",
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
             }
           ],
           "LinkedModel": null,

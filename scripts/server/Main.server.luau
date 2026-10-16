@@ -1,3 +1,5 @@
+local Achievements = require(ScriptService.Achievements)
+
 local admins = require(ScriptService.Admins)
 
 local Blocks = require(ScriptService.Blocks)
@@ -83,8 +85,6 @@ local function UpdateConnection(connection: Connection)
 	connection.Instance.Size = Vector3.New(0.5, 0.5, distance)
 end
 
-local ignoreConnAchiev = {}
-
 local function CreateConnection(from: Blocks.Block, to: Blocks.Block, player: Player?): Connection
 	if not GetOwner(from) then
 		from.Owner = player.UserID
@@ -117,12 +117,7 @@ local function CreateConnection(from: Blocks.Block, to: Blocks.Block, player: Pl
 	local c = { Instance = connection, From = from, To = to }
 	UpdateConnection(c)
 
-	if player and not ignoreConnAchiev[player.UserID] then
-		spawn(function()
-			Achievements:AwardAsync(player.UserID, 241564) -- An IQ too high?
-			ignoreConnAchiev[player.UserID] = true
-		end)
-	end
+	Achievements.Award(player, 140234, 241564) -- An IQ too high?
 
 	table.insert(connections, c)
 	return c
@@ -341,8 +336,6 @@ networkMassMove.InvokedServer:Connect(function(player: Player, message: NetMessa
 	end
 end)
 
-local ignorePositionAch = {}
-
 networkImport.InvokedServer:Connect(function(player: Player, message: NetMessage)
 	local idMap: { [any]: number } = {}
 
@@ -375,14 +368,11 @@ networkImport.InvokedServer:Connect(function(player: Player, message: NetMessage
 
 			local position = origin + Vector3.New(v[2], v[3], v[4])
 			if
-				(
-					math.floor(position.X) ~= position.X
-					or math.floor(position.Y) ~= position.Y
-					or math.floor(position.Z) ~= position.Z
-				) and not ignorePositionAch[player.UserID]
+				math.floor(position.X) ~= position.X
+				or math.floor(position.Y) ~= position.Y
+				or math.floor(position.Z) ~= position.Z
 			then
-				Achievements:AwardAsync(player.UserID, 242030) -- The Stars Aligned
-				ignorePositionAch[player.UserID] = true
+				Achievements.Award(player, 140234, 242030) -- The Stars Aligned
 			end
 
 			local block = Blocks.Create(definition, position, player, v[8] and true or false)

@@ -1,3 +1,5 @@
+local Achievements = require(ScriptService.Achievements)
+
 local admins = require(ScriptService.Admins)
 
 local banDS = Datastore:GetDatastore("Bans")
@@ -191,7 +193,7 @@ Chat.ChatPredicate = function(player: Player, message: string)
 				lifetimeStr ..= `{seconds}s`
 				Chat:UnicastMessage(`[STATS]: Server Age: {lifetimeStr}`, player)
 
-				Achievements:AwardAsync(player.UserID, 241565) -- Quality Assurance
+				Achievements.Award(player, 140234, 241565) -- Quality Assurance
 			end)
 		elseif tokens[1] == "!goto" then
 			local target = GetTarget(tokens[2])
