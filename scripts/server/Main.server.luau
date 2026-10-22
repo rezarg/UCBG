@@ -19,9 +19,33 @@ local networkDeleteUnowned: BindableEvent = ScriptService.DeleteUnowned
 
 local networkLog: NetworkEvent = ScriptService.Log
 
+local function FilterWithWhitespace(value: string)
+	value = tostring(value)
+
+	local startWhitespace = ""
+	for i = 1, #value // 2 do
+		if value[i] ~= " " then
+			break
+		end
+
+		startWhitespace ..= " "
+	end
+
+	local endWhitespace = ""
+	for i = #value, #value // 2, -1 do
+		if value[i] ~= " " then
+			break
+		end
+
+		endWhitespace ..= " "
+	end
+
+	return startWhitespace .. Filter:Filter(value) .. endWhitespace
+end
+
 local function Log(content: string)
 	content = content:gsub("%[", "[lb]")
-	print(`[SERVER LOG]: {Filter:Filter(content)}`) -- Polytoria PLEASE make it so people can't see this :/
+	print(`[SERVER LOG]: {FilterWithWhitespace(content)}`) -- Polytoria PLEASE make it so people can't see this :/
 
 	local message = NetMessage.New()
 	message:AddString("Content", content)
@@ -156,14 +180,16 @@ local function DestroyBlock(block: Blocks.Block)
 	setmetatable(block, nil)
 end
 
-local function SetProperty(block: Blocks.Block, property: string, value: any, player: Player)
+local function SetProperty(block: Blocks.Block, property: string, value: string, player: Player)
 	local data = json:parse(block.Instance.Data.Value)
 	if not GetOwner(block) then
 		block.Owner = player.UserID
 		data.Owner = player.UserID
 	end
 
-	value = Filter:Filter(tostring(value))
+	value = tostring(value)
+
+	FilterWithWhitespace(value)
 
 	if block.Properties[property] == nil then
 		return
@@ -175,7 +201,6 @@ local function SetProperty(block: Blocks.Block, property: string, value: any, pl
 	end
 
 	if property == "Label" then
-		value = tostring(value)
 		if #value > 48 then
 			value = value:sub(1, 48)
 		end
@@ -390,14 +415,14 @@ networkImport.InvokedServer:Connect(function(player: Player, message: NetMessage
 			return
 		end
 
-		wait(1 / 50)
+		wait(1 / 60)
 
 		if i % 15 == 0 and i ~= 0 then
-			wait(1 / 35)
+			wait(1 / 40)
 		end
 
 		if i % 150 == 0 and i ~= 0 then
-			wait(0.1)
+			wait(0.06)
 		end
 	end
 

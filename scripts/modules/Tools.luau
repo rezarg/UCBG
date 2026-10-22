@@ -836,13 +836,15 @@ Definitions.Import = {
 		if self.Data.DidInit then
 			return
 		end
+
 		self.Data.DidInit = true
 
 		local importButton: UIButton = PlayerGUI.Main.ImportBox.ImportButton
 		importButton.MouseDown:Connect(function()
-			local success, data = pcall(function(...)
+			local success, data = pcall(function()
 				return json:parse(PlayerGUI.Main.ImportBox.Text)
 			end)
+
 			if not success or not data then
 				PlayerGUI.Main.ImportBox.Text = "Invalid Import Data"
 				return

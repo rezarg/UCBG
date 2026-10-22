@@ -25,6 +25,30 @@ export type BlockDef = {
 	UpdateVisual: ((self: Block) -> ())?,
 }
 
+local function FilterWithWhitespace(value: string)
+	value = tostring(value)
+
+	local startWhitespace = ""
+	for i = 1, #value // 2 do
+		if value[i] ~= " " then
+			break
+		end
+
+		startWhitespace ..= " "
+	end
+
+	local endWhitespace = ""
+	for i = #value, #value // 2, -1 do
+		if value[i] ~= " " then
+			break
+		end
+
+		endWhitespace ..= " "
+	end
+
+	return startWhitespace .. Filter:Filter(value) .. endWhitespace
+end
+
 local Blocks = {}
 Blocks.Players = {}
 
@@ -670,12 +694,12 @@ Definitions.Setter = {
 							end
 							newValue = newValue:sub(1, 48):gsub("%[font", "[lb]font")
 							if label.Text ~= newValue then
-								newValue = Filter:Filter(newValue)
+								newValue = FilterWithWhitespace(newValue)
 								label.Text = newValue
 							end
 						end
 					elseif newValue ~= other.Properties[property] then
-						newValue = Filter:Filter(newValue)
+						newValue = FilterWithWhitespace(newValue)
 					end
 
 					changed = changed or other.Properties[property] ~= newValue
