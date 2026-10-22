@@ -498,9 +498,13 @@ setterOpMap["^="] = "^"
 setterOpMap["//="] = "//"
 setterOpMap["..="] = ".."
 
-local function GetSetterValue(
-	value: string
-): { Value: number | string, Numeric: boolean, Operator: string?, Literal: boolean }
+local function GetSetterValue(value: string): {
+	Value: number | string,
+	Raw: string,
+	Numeric: boolean,
+	Operator: string?,
+	Literal: boolean,
+}
 	local result = {}
 	result.Literal = false
 	if value:sub(1, 1) == '"' and value:sub(-1) == '"' then
@@ -518,6 +522,7 @@ local function GetSetterValue(
 	local numericValue = tonumber(value)
 	result.Numeric = numericValue ~= nil
 	result.Value = numericValue ~= nil and numericValue or value
+	result.Raw = value
 	return result
 end
 
@@ -610,7 +615,7 @@ Definitions.Setter = {
 						elseif thisValue.Operator == "//" then
 							otherValue.Value //= thisValue.Value
 						elseif thisValue.Operator == ".." then
-							otherValue.Value = tostring(otherValue.Value) .. tostring(thisValue.Value)
+							otherValue.Value = otherValue.Raw .. thisValue.Raw
 						end
 
 						newValue = otherValue.Operator and `{otherValue.Operator}={otherValue.Value}`
@@ -636,7 +641,7 @@ Definitions.Setter = {
 							elseif thisValue.Operator == "//" then
 								otherValueSecond.Value //= thisValue.Value
 							elseif thisValue.Operator == ".." then
-								otherValueSecond.Value = tostring(otherValueSecond.Value) .. tostring(thisValue.Value)
+								otherValueSecond.Value = otherValueSecond.Raw .. thisValue.Raw
 							end
 
 							newValue = `"{otherValueSecond.Operator}={otherValueSecond.Value}"`
