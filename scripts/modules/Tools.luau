@@ -375,10 +375,16 @@ Definitions.Inspect = {
 					before = input.Text
 				end)
 				input.Submitted:Connect(function(_: string)
-					input.Text = SetProperty(uuid, k, varType, input.Text, before)
+					if input.Text ~= before then
+						input.Text = SetProperty(uuid, k, varType, input.Text, before)
+						before = input.Text
+					end
 				end)
 				input.FocusExit:Connect(function()
-					input.Text = SetProperty(uuid, k, varType, input.Text, before)
+					if input.Text ~= before then
+						input.Text = SetProperty(uuid, k, varType, input.Text, before)
+						before = input.Text
+					end
 				end)
 			end
 		elseif result.Instance.Parent == Environment.Connections then
