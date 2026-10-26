@@ -23,7 +23,7 @@ local function FilterWithWhitespace(value: string)
 	value = tostring(value)
 
 	local startWhitespace = ""
-	for i = 1, #value // 2 do
+	for i = 1, #value do
 		if value[i] ~= " " then
 			break
 		end
@@ -32,7 +32,11 @@ local function FilterWithWhitespace(value: string)
 	end
 
 	local endWhitespace = ""
-	for i = #value, #value // 2, -1 do
+	for i = #value, 1, -1 do
+		if i <= #startWhitespace then
+			break
+		end
+
 		if value[i] ~= " " then
 			break
 		end

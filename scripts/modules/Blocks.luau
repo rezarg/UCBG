@@ -29,7 +29,7 @@ local function FilterWithWhitespace(value: string)
 	value = tostring(value)
 
 	local startWhitespace = ""
-	for i = 1, #value // 2 do
+	for i = 1, #value do
 		if value[i] ~= " " then
 			break
 		end
@@ -38,7 +38,11 @@ local function FilterWithWhitespace(value: string)
 	end
 
 	local endWhitespace = ""
-	for i = #value, #value // 2, -1 do
+	for i = #value, 1, -1 do
+		if i <= #startWhitespace then
+			break
+		end
+
 		if value[i] ~= " " then
 			break
 		end
@@ -617,6 +621,7 @@ Definitions.Setter = {
 					if not property or #property == 0 or not other.Properties[property] then
 						continue
 					end
+
 					local thisValue = GetSetterValue(values[i])
 					local otherValue = GetSetterValue(tostring(other.Properties[property]))
 
@@ -671,7 +676,7 @@ Definitions.Setter = {
 							newValue = `"{otherValueSecond.Operator}={otherValueSecond.Value}"`
 						else
 							if thisValue.Operator == ".." then
-								otherValue.Value = tostring(otherValueSecond.Value) .. tostring(thisValue.Value)
+								otherValue.Value = otherValueSecond.Raw .. thisValue.Raw
 
 								newValue = otherValue.Operator and `{otherValue.Operator}={otherValue.Value}`
 									or otherValue.Value
