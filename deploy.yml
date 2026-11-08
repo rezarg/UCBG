@@ -1,0 +1,26 @@
+# Workflow to automatically publish releases to Polytoria
+# See https://github.com/little-meow-meow/polytoria-deploy for more info
+
+name: Deploy
+
+on:
+    release:
+        types: [published]
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+              with:
+                path: ./project
+            - uses: little-meow-meow/polytoria-deploy@main
+              with:
+                creator-token: ${{ secrets.CREATOR_TOKEN }}
+                project-path: $GITHUB_WORKSPACE/project
+                place-id: 140234 # Community World
+            - uses: little-meow-meow/polytoria-deploy@main
+              with:
+                creator-token: ${{ secrets.CREATOR_TOKEN }}
+                project-path: $GITHUB_WORKSPACE/project
+                place-id: 144741 # Single-player World

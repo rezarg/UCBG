@@ -1,0 +1,3 @@
+# Polytoria specific ignores
+.poly/
+toolbox/**/*

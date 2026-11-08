@@ -37,7 +37,7 @@
                   0
                 ],
                 "RotationOffset": [
-                  -0,
+                  0,
                   0,
                   0
                 ],
@@ -49,8 +49,8 @@
                 ],
                 "LocalRotation": [
                   0,
-                  -0,
-                  -0
+                  0,
+                  0
                 ],
                 "LocalSize": [
                   1,
@@ -92,7 +92,7 @@
                   0
                 ],
                 "LocalRotation": [
-                  -0,
+                  0,
                   0,
                   0
                 ],
@@ -146,8 +146,8 @@
                     "Color": "81faff40",
                     "AngularVelocity": [
                       0,
-                      -0,
-                      -0
+                      0,
+                      0
                     ],
                     "Velocity": [
                       0,
@@ -165,7 +165,7 @@
                       0
                     ],
                     "LocalRotation": [
-                      -0,
+                      0,
                       0,
                       0
                     ],
@@ -188,7 +188,7 @@
                           0
                         ],
                         "LocalRotation": [
-                          -0,
+                          0,
                           0,
                           0
                         ],
@@ -218,7 +218,7 @@
                       0
                     ],
                     "LocalRotation": [
-                      -0,
+                      0,
                       0,
                       0
                     ],
@@ -239,8 +239,8 @@
                         "Color": "81faff40",
                         "AngularVelocity": [
                           0,
-                          -0,
-                          -0
+                          0,
+                          0
                         ],
                         "Velocity": [
                           0,
@@ -255,7 +255,7 @@
                         "LocalPosition": [
                           0,
                           0.49999985,
-                          -6.9230725E-07
+                          -6.9230725e-07
                         ],
                         "LocalRotation": [
                           90,
@@ -282,8 +282,8 @@
                         "Color": "81faff40",
                         "AngularVelocity": [
                           0,
-                          -0,
-                          -0
+                          0,
+                          0
                         ],
                         "Velocity": [
                           0,
@@ -298,7 +298,7 @@
                         "LocalPosition": [
                           0,
                           -0.50000036,
-                          -7.382042E-07
+                          -7.382042e-07
                         ],
                         "LocalRotation": [
                           90,
@@ -325,8 +325,8 @@
                         "Color": "81faff40",
                         "AngularVelocity": [
                           0,
-                          -0,
-                          -0
+                          0,
+                          0
                         ],
                         "Velocity": [
                           0,
@@ -340,8 +340,8 @@
                         "RayPassthrough": 0,
                         "LocalPosition": [
                           -0.5000001,
-                          2.3841858E-07,
-                          -7.1525574E-07
+                          2.3841858e-07,
+                          -7.1525574e-07
                         ],
                         "LocalRotation": [
                           90,
@@ -368,8 +368,8 @@
                         "Color": "81faff40",
                         "AngularVelocity": [
                           0,
-                          -0,
-                          -0
+                          0,
+                          0
                         ],
                         "Velocity": [
                           0,
@@ -383,8 +383,8 @@
                         "RayPassthrough": 0,
                         "LocalPosition": [
                           0.5000001,
-                          2.3841858E-07,
-                          -7.1525574E-07
+                          2.3841858e-07,
+                          -7.1525574e-07
                         ],
                         "LocalRotation": [
                           90,
@@ -415,8 +415,8 @@
                     "Color": "ffffff00",
                     "AngularVelocity": [
                       0,
-                      -0,
-                      -0
+                      0,
+                      0
                     ],
                     "Velocity": [
                       0,
@@ -434,7 +434,7 @@
                       0
                     ],
                     "LocalRotation": [
-                      -0,
+                      0,
                       0,
                       0
                     ],
@@ -481,7 +481,7 @@
                   -200.25
                 ],
                 "LocalRotation": [
-                  -0,
+                  0,
                   0,
                   0
                 ],
@@ -525,7 +525,7 @@
                   -200.25
                 ],
                 "LocalRotation": [
-                  -0,
+                  0,
                   0,
                   0
                 ],
@@ -569,7 +569,7 @@
                   200.25
                 ],
                 "LocalRotation": [
-                  -0,
+                  0,
                   0,
                   0
                 ],
@@ -613,7 +613,7 @@
                   200.25
                 ],
                 "LocalRotation": [
-                  -0,
+                  0,
                   0,
                   0
                 ],
@@ -667,7 +667,7 @@
                 "LocalRotation": [
                   49.999992,
                   -30,
-                  -0
+                  0
                 ],
                 "LocalSize": [
                   1,
@@ -1271,6 +1271,17 @@
               "Children": [],
               "LinkedModel": null,
               "IsLinkedChild": false
+            },
+            {
+              "Name": "SaveManager",
+              "ClassName": "NetworkEvent",
+              "ID": "fc556882-5611-45d5-a5bd-a01ceea3f531",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
             }
           ],
           "LinkedModel": null,
@@ -1293,8 +1304,8 @@
                 "Color": "292929ba",
                 "AngularVelocity": [
                   0,
-                  -0,
-                  -0
+                  0,
+                  0
                 ],
                 "Velocity": [
                   0,
@@ -1312,7 +1323,7 @@
                   -11
                 ],
                 "LocalRotation": [
-                  -0,
+                  0,
                   0,
                   0
                 ],
@@ -1337,7 +1348,7 @@
                     "HorizontalAlignment": 1,
                     "OutlineColor": "000000ff",
                     "OutlineWidth": 0,
-                    "Text": "\u003E",
+                    "Text": ">",
                     "UseRichText": false,
                     "VerticalAlignment": 1,
                     "Visible": true,
@@ -1718,7 +1729,7 @@
                   12
                 ],
                 "LocalRotation": [
-                  -0,
+                  0,
                   0,
                   0
                 ],
@@ -2244,7 +2255,7 @@
                     "FontSize": 12,
                     "JustifyText": 1,
                     "MaxAutoSize": 12,
-                    "MultiLine": false,
+                    "MultiLine": true,
                     "Placeholder": "Export Code Will Appear Here.",
                     "PlaceholderColor": "ffffff75",
                     "ReadOnly": false,
@@ -2281,8 +2292,8 @@
                       0
                     ],
                     "SizeRelative": [
-                      0.5,
-                      0.2
+                      0.75,
+                      0.55
                     ],
                     "Visible": false,
                     "ZIndex": 0,
@@ -2327,7 +2338,7 @@
                         "MaxAutoSize": 0,
                         "OutlineColor": "000000ff",
                         "OutlineWidth": 3,
-                        "Text": "Ctrl\u002BA to Select All, Ctrl\u002BC to Copy. Save it for later.",
+                        "Text": "Ctrl+A to Select All, Ctrl+C to Copy. Save it for later.",
                         "TextColor": "ffffffa2",
                         "UseRichText": false,
                         "VerticalAlignment": 1,
@@ -2812,6 +2823,1769 @@
                     "Tags": []
                   },
                   "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "LoadFromDatastore",
+                  "ClassName": "UIButton",
+                  "ID": "fd4cd7cc-cff3-455d-a66a-5af7a559c9b5",
+                  "Properties": {
+                    "BorderColor": "000000ff",
+                    "BorderMode": 0,
+                    "BorderWidth": 0,
+                    "Color": "212121e8",
+                    "CornerRadius": 0,
+                    "ClipDescendants": false,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0,
+                      0
+                    ],
+                    "PositionOffset": [
+                      20,
+                      58
+                    ],
+                    "PositionRelative": [
+                      0,
+                      0
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      180,
+                      32
+                    ],
+                    "SizeRelative": [
+                      0,
+                      0
+                    ],
+                    "Visible": true,
+                    "ZIndex": 20,
+                    "Tags": [],
+                    "AutoSize": false,
+                    "FontSize": 14,
+                    "HorizontalAlignment": 1,
+                    "MaxAutoSize": 14,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "Load from Datastore",
+                    "TextColor": "ffffffff",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1
+                  },
+                  "Children": [
+                    {
+                      "Name": "UICorner",
+                      "ClassName": "UICorner",
+                      "ID": "3189c680-1d83-4e20-90ce-ef308951388d",
+                      "Properties": {
+                        "BottomLeftRadius": {
+                          "Offset": 6,
+                          "Scale": 0
+                        },
+                        "BottomRightRadius": {
+                          "Offset": 6,
+                          "Scale": 0
+                        },
+                        "TopLeftRadius": {
+                          "Offset": 6,
+                          "Scale": 0
+                        },
+                        "TopRightRadius": {
+                          "Offset": 6,
+                          "Scale": 0
+                        },
+                        "Tags": []
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "SaveManagerPanel",
+                  "ClassName": "UIView",
+                  "ID": "99335d43-9c32-411c-aeb7-71cf655c8829",
+                  "Properties": {
+                    "BorderColor": "777777ff",
+                    "BorderMode": 1,
+                    "BorderWidth": 1,
+                    "Color": "171717f5",
+                    "CornerRadius": 0,
+                    "ClipDescendants": true,
+                    "IgnoreMouse": false,
+                    "MaskMode": 0,
+                    "PivotPoint": [
+                      0.5,
+                      0.5
+                    ],
+                    "PositionOffset": [
+                      0,
+                      48
+                    ],
+                    "PositionRelative": [
+                      0.5,
+                      0.5
+                    ],
+                    "Rotation": 0,
+                    "Scale": [
+                      1,
+                      1
+                    ],
+                    "SizeOffset": [
+                      640,
+                      440
+                    ],
+                    "SizeRelative": [
+                      0,
+                      0
+                    ],
+                    "Visible": false,
+                    "ZIndex": 100,
+                    "Tags": []
+                  },
+                  "Children": [
+                    {
+                      "Name": "SaveManagerTitle",
+                      "ClassName": "UILabel",
+                      "ID": "de5c64d1-de7f-4654-ab73-0cd68d20f5da",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          16,
+                          10
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          440,
+                          30
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 16,
+                        "HorizontalAlignment": 0,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Account Datastore Saves",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "SaveNameInput",
+                      "ClassName": "UITextInput",
+                      "ID": "c0dee1f5-ac87-4794-bd6f-8ff3d54ee961",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          16,
+                          50
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          244,
+                          30
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "JustifyText": 0,
+                        "MaxAutoSize": 14,
+                        "MultiLine": false,
+                        "Placeholder": "Enter a file name",
+                        "PlaceholderColor": "ffffff80",
+                        "ReadOnly": false,
+                        "ReadOnlyColor": "00000033",
+                        "Text": "",
+                        "TextColor": "ffffffff"
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "7fb2e680-cf9f-47a2-821d-64194ac7768e",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 5,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 5,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 5,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 5,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "SaveFileButton",
+                      "ClassName": "UIButton",
+                      "ID": "792724b6-5b8d-4603-a5e4-1e057bd42101",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          268,
+                          50
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          160,
+                          30
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Save to Datastore",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "b4db7702-0865-4892-a529-9c0ff430bbdd",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "RefreshSavesButton",
+                      "ClassName": "UIButton",
+                      "ID": "beb6b6b8-4667-4895-a87a-91690016811c",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          438,
+                          50
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          100,
+                          30
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Refresh List",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "473de4aa-602d-4a9c-a396-6e640477f5e8",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "CloseSaveManager",
+                      "ClassName": "UIButton",
+                      "ID": "90ed547f-7163-44cd-bb46-f307707afb77",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          518,
+                          10
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          106,
+                          28
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Close",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "0e1b91a4-4711-41ae-9804-76d6350f7239",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "SaveManagerStatus",
+                      "ClassName": "UILabel",
+                      "ID": "880472f7-4ddd-49a2-a838-7907a01fd694",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          16,
+                          86
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          608,
+                          22
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 11,
+                        "HorizontalAlignment": 0,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Select a saved file below.",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "SaveList",
+                      "ClassName": "UIScrollView",
+                      "ID": "8b228a38-368c-4902-8a49-123b9bcf3e00",
+                      "Properties": {
+                        "ClipDescendants": true,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          16,
+                          142
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          294,
+                          190
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 110,
+                        "Tags": [],
+                        "HorizontalScrollMode": 0,
+                        "VerticalScrollMode": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "SaveListContent",
+                          "ClassName": "UIVLayout",
+                          "ID": "03c582f5-34b6-4898-aeb8-3b5edcfe06bf",
+                          "Properties": {
+                            "ChildAlignment": 0,
+                            "Spacing": 4,
+                            "ClipDescendants": false,
+                            "IgnoreMouse": false,
+                            "MaskMode": 0,
+                            "PivotPoint": [
+                              0,
+                              0
+                            ],
+                            "PositionOffset": [
+                              0,
+                              0
+                            ],
+                            "PositionRelative": [
+                              0,
+                              0
+                            ],
+                            "Rotation": 0,
+                            "Scale": [
+                              1,
+                              1
+                            ],
+                            "SizeOffset": [
+                              294,
+                              190
+                            ],
+                            "SizeRelative": [
+                              0,
+                              0
+                            ],
+                            "Visible": true,
+                            "ZIndex": 110,
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "LoadSelectedSave",
+                      "ClassName": "UIButton",
+                      "ID": "a9a9c2d2-27dd-47ab-951e-52c0327c6a67",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          16,
+                          340
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          144,
+                          30
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Load Selected",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "02fe87e6-452e-4ae2-a6b8-c1ea2a1c3764",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "RenameSelectedSave",
+                      "ClassName": "UIButton",
+                      "ID": "7dacc46d-0d72-4182-a88e-a2692c0ce3f6",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          168,
+                          340
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          144,
+                          30
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Rename Selected",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "a3c3a02f-9897-4665-b563-b24e47e2f7d1",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "DeleteSelectedSave",
+                      "ClassName": "UIButton",
+                      "ID": "fd6b027e-4bab-44f9-b638-1c49e17c6565",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          320,
+                          340
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          144,
+                          30
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Delete Selected",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "b73ff82d-83e6-4446-934e-8f1873f7ea60",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "CopySelectedSave",
+                      "ClassName": "UIButton",
+                      "ID": "51a3206a-243d-4173-b4c0-340496be0c96",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          472,
+                          340
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          152,
+                          30
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Copy Data",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "ff6733aa-8b2a-4042-a9ee-5b41c7f3ec40",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "AdminToolsLabel",
+                      "ClassName": "UILabel",
+                      "ID": "f99a3821-90ac-444d-b459-d8b05af66628",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          16,
+                          380
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          608,
+                          20
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 12,
+                        "HorizontalAlignment": 0,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "ADMIN MODERATION",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "AdminUserIdInput",
+                      "ClassName": "UITextInput",
+                      "ID": "1130b8df-de53-41a0-b9e5-57dc397d782a",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          16,
+                          404
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          190,
+                          28
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "JustifyText": 0,
+                        "MaxAutoSize": 14,
+                        "MultiLine": false,
+                        "Placeholder": "Account UserID",
+                        "PlaceholderColor": "ffffff80",
+                        "ReadOnly": false,
+                        "ReadOnlyColor": "00000033",
+                        "Text": "",
+                        "TextColor": "ffffffff"
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "6331b9bd-97d0-44e3-a4ee-55c5b4ea9dc3",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 5,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 5,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 5,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 5,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "AdminSearchSaves",
+                      "ClassName": "UIButton",
+                      "ID": "0f5e87ef-9ea0-43be-91e8-b24471b0139f",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          214,
+                          404
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          138,
+                          28
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "View User Saves",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "ae73f086-1dae-440f-9fd1-197cb80135d4",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "AdminBackToOwnSaves",
+                      "ClassName": "UIButton",
+                      "ID": "770c98e1-dd80-4542-ab9d-ca9b47722706",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          362,
+                          404
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          100,
+                          28
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 14,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "My Saves",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "db19d8d7-bf62-442a-873a-eecab5d403b2",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "SaveRowTemplate",
+                      "ClassName": "UIButton",
+                      "ID": "ae218b46-668b-405c-873e-6737795ddd82",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          0,
+                          0
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          280,
+                          26
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": false,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 11,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Personal save",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "846204fc-c39c-4a86-b2a2-ec72b0f9b788",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "PersonalSavesTitle",
+                      "ClassName": "UILabel",
+                      "ID": "bc952616-5672-4d0e-8fe2-4d765f7debd0",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": true,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          16,
+                          116
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          294,
+                          22
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 12,
+                        "HorizontalAlignment": 0,
+                        "MaxAutoSize": 12,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "PERSONAL SAVES",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "AdminBuildTitle",
+                      "ClassName": "UILabel",
+                      "ID": "5d3dda82-f7b9-487c-b54a-3123ad5dbf74",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": true,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          330,
+                          116
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          294,
+                          22
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 12,
+                        "HorizontalAlignment": 0,
+                        "MaxAutoSize": 12,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "ADMIN BUILDS  |  GLOBAL TUTORIALS",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "AdminBuildList",
+                      "ClassName": "UIScrollView",
+                      "ID": "814b1ec3-acbc-48d5-b7a8-f9d87642acb9",
+                      "Properties": {
+                        "ClipDescendants": true,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          330,
+                          142
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          294,
+                          190
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": true,
+                        "ZIndex": 110,
+                        "Tags": [],
+                        "HorizontalScrollMode": 0,
+                        "VerticalScrollMode": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "AdminBuildListContent",
+                          "ClassName": "UIVLayout",
+                          "ID": "482ba8a1-0e34-4dfc-8e3b-471152a0b773",
+                          "Properties": {
+                            "ChildAlignment": 0,
+                            "Spacing": 4,
+                            "ClipDescendants": false,
+                            "IgnoreMouse": false,
+                            "MaskMode": 0,
+                            "PivotPoint": [
+                              0,
+                              0
+                            ],
+                            "PositionOffset": [
+                              0,
+                              0
+                            ],
+                            "PositionRelative": [
+                              0,
+                              0
+                            ],
+                            "Rotation": 0,
+                            "Scale": [
+                              1,
+                              1
+                            ],
+                            "SizeOffset": [
+                              294,
+                              190
+                            ],
+                            "SizeRelative": [
+                              0,
+                              0
+                            ],
+                            "Visible": true,
+                            "ZIndex": 110,
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "AdminBuildRowTemplate",
+                      "ClassName": "UIButton",
+                      "ID": "61db0443-a565-491d-9c3a-827d7feb9021",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          0,
+                          0
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          280,
+                          26
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": false,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 11,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Admin Build",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "f580314d-15fd-4cf5-9149-aa5ca66dd40c",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    },
+                    {
+                      "Name": "PublishAdminBuild",
+                      "ClassName": "UIButton",
+                      "ID": "0af4da9a-8693-4b33-b8b6-dd7d94dc1cda",
+                      "Properties": {
+                        "BorderColor": "000000ff",
+                        "BorderMode": 0,
+                        "BorderWidth": 0,
+                        "Color": "212121e8",
+                        "CornerRadius": 0,
+                        "ClipDescendants": false,
+                        "IgnoreMouse": false,
+                        "MaskMode": 0,
+                        "PivotPoint": [
+                          0,
+                          0
+                        ],
+                        "PositionOffset": [
+                          470,
+                          404
+                        ],
+                        "PositionRelative": [
+                          0,
+                          0
+                        ],
+                        "Rotation": 0,
+                        "Scale": [
+                          1,
+                          1
+                        ],
+                        "SizeOffset": [
+                          154,
+                          28
+                        ],
+                        "SizeRelative": [
+                          0,
+                          0
+                        ],
+                        "Visible": false,
+                        "ZIndex": 20,
+                        "Tags": [],
+                        "AutoSize": false,
+                        "FontSize": 11,
+                        "HorizontalAlignment": 1,
+                        "MaxAutoSize": 14,
+                        "OutlineColor": "000000ff",
+                        "OutlineWidth": 0,
+                        "Text": "Publish Admin Build",
+                        "TextColor": "ffffffff",
+                        "UseRichText": false,
+                        "VerticalAlignment": 1
+                      },
+                      "Children": [
+                        {
+                          "Name": "UICorner",
+                          "ClassName": "UICorner",
+                          "ID": "8a6b1f9b-461d-4476-8820-54578d52edba",
+                          "Properties": {
+                            "BottomLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "BottomRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopLeftRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "TopRightRadius": {
+                              "Offset": 6,
+                              "Scale": 0
+                            },
+                            "Tags": []
+                          },
+                          "Children": [],
+                          "LinkedModel": null,
+                          "IsLinkedChild": false
+                        }
+                      ],
+                      "LinkedModel": null,
+                      "IsLinkedChild": false
+                    }
+                  ],
                   "LinkedModel": null,
                   "IsLinkedChild": false
                 }
