@@ -27,6 +27,9 @@ until plotRef.Value
 local plot = plotRef.Value
 local plotGround: Part = plot.PlotGround
 
+local globalPlot = Environment:WaitChild("PlotGlobal")
+local globalPlotGround: Part = globalPlot.PlotGround
+
 local networkPlaceBlock: NetworkEvent = ScriptService.PlaceBlock
 
 local gridOffset = Vector3.New(0.5, 0, 0.5)
@@ -153,12 +156,14 @@ Input.KeyDown:Connect(function(key: KeyCode, focused: boolean)
 
 			local placementType: "invalid" | "plot" | "global" = "invalid"
 
-			if Vector3InRange(insertPosition, plotRange) then
+			if Vector3InRange(insertPosition, plotRange) then -- Source is inside plot
 				placementType = "plot"
 			elseif
-				Vector3InRange(insertPosition, {
-					Min = Vector3.New(-64, 0, -64),
-					Max = Vector3.New(64, 64, 64),
+				Vector3InRange(insertPosition, { -- Source is inside global plot
+					Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
+					Max = globalPlotGround.Position
+						+ globalPlotGround.Size * Vector3.New(0.5, 0, 0.5)
+						+ Vector3.Up * 64,
 				})
 			then
 				placementType = "global"
