@@ -1,5 +1,5 @@
 export type Block = {
-	Owner: Player?,
+	Owner: number?,
 	Definition: BlockDef,
 	UUID: number,
 	Inputs: { Block },
