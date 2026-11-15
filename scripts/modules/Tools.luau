@@ -419,7 +419,7 @@ Definitions.Delete = {
 	Data = {},
 	Start = function(self: Tool)
 		selectionBox3D.Position = Vector3.Zero
-		selectionBox3D.Size = Vector3.One
+		selectionBox3D.Size = Vector3.Zero
 		selectionBox3D.Marker3D.LocalPosition = Vector3.Zero
 		selectionBox3D.Marker3D.Size = Vector3.Zero
 		selectionBox3D.Marker3D.AppearOnTop = false
@@ -869,8 +869,8 @@ Definitions.Import = {
 
 			selectionBox3D.Size = self.Data.Size
 			selectionBox3D.Position = self.Data.Position + (self.Data.Size - Vector3.One * 1.1) / 2
-			selectionBox3D.Marker3D.Size = Vector3.One
 			selectionBox3D.Marker3D.Position = selectionBox3D.Position - (selectionBox3D.Size - Vector3.One * 1.1) / 2
+			selectionBox3D.Marker3D.Size = selectionBox3D.Size - Vector3.One
 			selectionBox3D.Marker3D.AppearOnTop = true
 
 			PlayerGUI.Main.ImportBox.Visible = false
@@ -882,7 +882,7 @@ Definitions.Import = {
 			self.Data.ChoosePosition = nil
 			PlayerGUI.Main.AcceptImport.Visible = false
 			PlayerGUI.Main.ImportBox.Visible = false
-			selectionBox3D.Size = Vector3.One
+			selectionBox3D.Size = Vector3.Zero
 			selectionBox3D.Position = Vector3.Zero
 			selectionBox3D.Marker3D.LocalPosition = Vector3.Zero
 			selectionBox3D.Marker3D.AppearOnTop = false
@@ -898,9 +898,10 @@ Definitions.Import = {
 		PlayerGUI.Main.AcceptImport.Visible = false
 		PlayerGUI.Main.ImportBox.Visible = false
 		self.Data.ChoosePosition = nil
-		selectionBox3D.Size = Vector3.One
+		selectionBox3D.Size = Vector3.Zero
 		selectionBox3D.Position = Vector3.Zero
-		selectionBox3D.Marker3D.LocalPosition = Vector3.Zero
+		selectionBox3D.Marker3D.Position = Vector3.Zero
+		selectionBox3D.Marker3D.Size = Vector3.Zero
 		selectionBox3D.Marker3D.AppearOnTop = false
 		PlayerGUI.Main.TopbarText.Text = ""
 	end,
@@ -934,8 +935,8 @@ Definitions.Import = {
 
 		selectionBox3D.Size = self.Data.Size
 		selectionBox3D.Position = gridPosition + (self.Data.Size - Vector3.One * 1.1) / 2
-		selectionBox3D.Marker3D.Size = Vector3.One
 		selectionBox3D.Marker3D.Position = selectionBox3D.Position - (selectionBox3D.Size - Vector3.One * 1.1) / 2
+		selectionBox3D.Marker3D.Size = selectionBox3D.Size - Vector3.One
 		selectionBox3D.Marker3D.AppearOnTop = true
 	end,
 }
