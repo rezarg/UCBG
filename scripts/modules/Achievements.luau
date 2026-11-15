@@ -25,7 +25,7 @@ function Achievements.Award(player: Player, worldId: number, achId: number)
 
 	table.insert(cache[player.UserID], achId)
 	local success, exception = pcall(function()
-		PTAchievements:AwardAsync(player.UserID, 247356)
+		PTAchievements:AwardAsync(player.UserID, achId)
 	end)
 
 	if not success then
