@@ -167,8 +167,9 @@ Definitions.Connect = {
 	Data = {},
 	Start = function(self: Tool)
 		selectionBox3D.Position = Vector3.Zero
-		selectionBox3D.Size = Vector3.One
+		selectionBox3D.Size = Vector3.Zero
 		selectionBox3D.Marker3D.LocalPosition = Vector3.Zero
+		selectionBox3D.Marker3D.Size = Vector3.Zero
 		selectionBox3D.Marker3D.AppearOnTop = false
 		selectedBlocks = {}
 		PlayerGUI.Main.TopbarText.Text = ""
@@ -287,8 +288,9 @@ Definitions.Inspect = {
 	Data = {},
 	Start = function(self: Tool)
 		selectionBox3D.Position = Vector3.Zero
-		selectionBox3D.Size = Vector3.One
+		selectionBox3D.Size = Vector3.Zero
 		selectionBox3D.Marker3D.LocalPosition = Vector3.Zero
+		selectionBox3D.Marker3D.Size = Vector3.Zero
 		selectionBox3D.Marker3D.AppearOnTop = false
 		selectedBlocks = {}
 		PlayerGUI.Main.TopbarText.Text = ""
@@ -419,6 +421,7 @@ Definitions.Delete = {
 		selectionBox3D.Position = Vector3.Zero
 		selectionBox3D.Size = Vector3.One
 		selectionBox3D.Marker3D.LocalPosition = Vector3.Zero
+		selectionBox3D.Marker3D.Size = Vector3.Zero
 		selectionBox3D.Marker3D.AppearOnTop = false
 		selectedBlocks = {}
 		PlayerGUI.Main.TopbarText.Text = ""
@@ -558,9 +561,10 @@ Definitions.Select = {
 				local message = NetMessage.New()
 				message:AddString("Data", json:serialize(uuids))
 				networkMassDelete:InvokeServer(message)
-				selectionBox3D.Size = Vector3.One
+				selectionBox3D.Size = Vector3.Zero
 				selectionBox3D.Position = Vector3.Zero
 				selectionBox3D.Marker3D.LocalPosition = Vector3.Zero
+				selectionBox3D.Marker3D.Size = Vector3.Zero
 				selectionBox3D.Marker3D.AppearOnTop = false
 				selectedBlocks = {}
 				PlayerGUI.Main.TopbarText.Text = ""
@@ -636,14 +640,16 @@ Definitions.Select = {
 
 			for i, block: Part in selection do
 				if not block then
-					continue -- Block deleted when looping selection (?)
+					continue
 				end
+
 				minX = math.min(minX, block.Position.X)
 				minY = math.min(minY, block.Position.Y)
 				minZ = math.min(minZ, block.Position.Z)
 				maxX = math.max(maxX, block.Position.X)
 				maxY = math.max(maxY, block.Position.Y)
 				maxZ = math.max(maxZ, block.Position.Z)
+
 				if i % 200 == 0 and i ~= 0 then
 					wait(1 / 40)
 				end
@@ -656,16 +662,17 @@ Definitions.Select = {
 
 			if #selectedBlocks == 0 then
 				selectionBox3D.Position = Vector3.Zero
-				selectionBox3D.Size = Vector3.One
+				selectionBox3D.Size = Vector3.Zero
 				selectionBox3D.Marker3D.LocalPosition = Vector3.Zero
+				selectionBox3D.Marker3D.Size = Vector3.Zero
 				selectionBox3D.Marker3D.AppearOnTop = false
 				PlayerGUI.Main.TopbarText.Text = ""
 			else
 				selectionBox3D.Position = Vector3.New((minX + maxX) / 2, (minY + maxY) / 2, (minZ + maxZ) / 2)
 				selectionBox3D.Size = Vector3.New(maxX - minX + 1.1, maxY - minY + 1.1, maxZ - minZ + 1.1)
-				selectionBox3D.Marker3D.Size = Vector3.One
 				selectionBox3D.Marker3D.Position = selectionBox3D.Position
 					- (selectionBox3D.Size - Vector3.One * 1.1) / 2
+				selectionBox3D.Marker3D.Size = selectionBox3D.Size - Vector3.One
 				selectionBox3D.Marker3D.AppearOnTop = true
 				local connectionCount = 0
 				local connBuffer = {}
