@@ -268,13 +268,16 @@ networkDestroyBlock.InvokedServer:Connect(function(player: Player, message: NetM
 		return
 	end
 
+	local globalPlot = Environment:WaitChild("PlotGlobal")
+	local globalPlotGround: Part = globalPlot.PlotGround
+
 	local owner = GetOwner(block)
 	if
 		not owner -- No Owner,
 		or player == owner -- Player's own block,
-		or Vector3InRange(block.Instance.Position, { -- Or block is in Global Plot
-			Min = Vector3.New(-64, 0, -64),
-			Max = Vector3.New(64, 64, 64),
+		or Vector3InRange(block.Instance.Position, { -- Source is inside global plot
+			Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
+			Max = globalPlotGround.Position + globalPlotGround.Size * Vector3.New(0.5, 0, 0.5) + Vector3.Up * 64,
 		})
 	then
 		DestroyBlock(block)

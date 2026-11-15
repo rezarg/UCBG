@@ -1001,9 +1001,11 @@ Definitions.Import = {
 					Min = plotGround.Position - Vector3.New(plotGround.Size.X / 2, 0, plotGround.Size.Z / 2),
 					Max = plotGround.Position + Vector3.New(plotGround.Size.X / 2, 128, plotGround.Size.Z / 2),
 				})
-				and not Vec3RangeFits(targetRange, { -- Target is inside global plot
-					Min = Vector3.New(-64, 0, -64),
-					Max = Vector3.New(64, 64, 64),
+				and not Vec3RangeFits(targetRange, { -- Source is inside global plot
+					Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
+					Max = globalPlotGround.Position
+						+ globalPlotGround.Size * Vector3.New(0.5, 0, 0.5)
+						+ Vector3.Up * 64,
 				})
 			then
 				Chat:UnicastMessage("[ERROR]: Import target is out of bounds.", Players.LocalPlayer)
