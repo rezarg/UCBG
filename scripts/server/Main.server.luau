@@ -12,6 +12,7 @@ local networkSetPropertyOfUUID: NetworkEvent = ScriptService.SetPropertyOfUUID
 local networkPulseBlock: NetworkEvent = ScriptService.PulseBlock
 local networkImport: NetworkEvent = ScriptService.Import
 local networkMassDelete: NetworkEvent = ScriptService.MassDelete
+local networkMassDeleteSS: BindableEvent = ScriptService.MassDeleteSS
 local networkMassMove: NetworkEvent = ScriptService.MassMove
 
 local networkDeleteUserOwned: BindableEvent = ScriptService.DeleteUserOwned
@@ -243,6 +244,22 @@ networkPlaceBlock.InvokedServer:Connect(function(player: Player, message: NetMes
 	table.insert(blockList, block)
 end)
 
+local function Vector3InRange(value: Vector3, range: { Min: Vector3, Max: Vector3 })
+	if value.X < range.Min.X or value.X > range.Max.X then
+		return false
+	end
+
+	if value.Y < range.Min.Y or value.Y > range.Max.Y then
+		return false
+	end
+
+	if value.Z < range.Min.Z or value.Z > range.Max.Z then
+		return false
+	end
+
+	return true
+end
+
 networkDestroyBlock.InvokedServer:Connect(function(player: Player, message: NetMessage)
 	local uuid = message:GetInt("UUID")
 
@@ -252,11 +269,19 @@ networkDestroyBlock.InvokedServer:Connect(function(player: Player, message: NetM
 	end
 
 	local owner = GetOwner(block)
-	if owner and player ~= owner then
-		Log(`{player.Name} deleted a block owned by {owner.Name}`)
+	if
+		not owner -- No Owner,
+		or player == owner -- Player's own block,
+		or Vector3InRange(block.Instance.Position, { -- Or block is in Global Plot
+			Min = Vector3.New(-64, 0, -64),
+			Max = Vector3.New(64, 64, 64),
+		})
+	then
+		DestroyBlock(block)
+		if owner and player ~= owner then
+			Log(`{player.Name} deleted a block owned by {owner.Name}`)
+		end
 	end
-
-	DestroyBlock(block)
 end)
 
 networkMakeConnection.InvokedServer:Connect(function(player: Player, message: NetMessage)
@@ -323,14 +348,17 @@ networkPulseBlock.InvokedServer:Connect(function(player: Player, message: NetMes
 	block.Pulsed = true
 end)
 
+local gridOffset = Vector3.New(0.5, 0, 0.5)
 local function GridVector3(original: Vector3, grid: number?): Vector3
 	if not grid then
 		grid = 1
 	end
+
+	original -= gridOffset
 	local x = math.round(original.X * grid) / grid
 	local y = math.round(original.Y * grid) / grid
 	local z = math.round(original.Z * grid) / grid
-	return Vector3.New(x, y, z)
+	return Vector3.New(x, y, z) + gridOffset
 end
 
 networkMassMove.InvokedServer:Connect(function(player: Player, message: NetMessage)
@@ -396,11 +424,7 @@ networkImport.InvokedServer:Connect(function(player: Player, message: NetMessage
 			end
 
 			local position = origin + Vector3.New(v[2], v[3], v[4])
-			if
-				math.floor(position.X) ~= position.X
-				or math.floor(position.Y) ~= position.Y
-				or math.floor(position.Z) ~= position.Z
-			then
+			if GridVector3(position) ~= position then
 				Achievements.Award(player, 140234, 242030) -- The Stars Aligned
 			end
 
@@ -467,9 +491,7 @@ networkImport.InvokedServer:Connect(function(player: Player, message: NetMessage
 	Chat:UnicastMessage("[IMPORT]: Import Finished!", player)
 end)
 
-networkMassDelete.InvokedServer:Connect(function(player: Player, message: NetMessage)
-	local uuids = json:parse(message:GetString("Data"))
-	local blocks = {}
+local function MassDeleteByUUIDs(uuids: { number }, player: Player?)
 	local connectionCount = 0
 
 	for i, v in uuids do
@@ -477,29 +499,38 @@ networkMassDelete.InvokedServer:Connect(function(player: Player, message: NetMes
 		if not block then
 			continue
 		end
-		table.insert(blocks, block)
-		connectionCount += #block.Inputs
+		local owner = GetOwner(block)
+		if
+			not owner -- No Owner,
+			or player == owner -- Player's own block,
+			or Vector3InRange(block.Instance.Position, { -- Or block is in Global Plot
+				Min = Vector3.New(-64, 0, -64),
+				Max = Vector3.New(64, 64, 64),
+			})
+		then
+			DestroyBlock(block)
+			connectionCount += #block.Inputs
+		end
 		if i % 100 == 0 and i ~= 0 then
 			wait(1 / 40)
 		end
 	end
 
-	Log(`{player.Name} deleted {#uuids} blocks.`)
+	return #uuids, connectionCount
+end
 
-	if #uuids > 50 or connectionCount > 150 then
-		Chat:BroadcastMessage(`[NOTICE]: {player.Name} deleted {#uuids} blocks and ~{connectionCount} connections.`)
-	end
+networkMassDelete.InvokedServer:Connect(function(player: Player, message: NetMessage)
+	local uuids = json:parse(message:GetString("Data"))
+	local delBlocks, deloConns = MassDeleteByUUIDs(uuids, player)
 
-	for i, v in uuids do
-		local block = GetBlockByUUID(v)
-		if not block then
-			continue
-		end
-		DestroyBlock(block)
-		if i % 75 == 0 and i ~= 0 then
-			wait(1 / 40)
-		end
+	Log(`{player.Name} deleted {delBlocks} blocks.`)
+	if #uuids > 50 or deloConns > 150 then
+		Chat:BroadcastMessage(`[NOTICE]: {player.Name} deleted {delBlocks} blocks and ~{deloConns} connections.`)
 	end
+end)
+
+networkMassDeleteSS.Invoked:Connect(function(uuids: { number })
+	MassDeleteByUUIDs(uuids)
 end)
 
 networkDeleteUserOwned.Invoked:Connect(function(player: Player)

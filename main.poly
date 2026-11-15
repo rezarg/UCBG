@@ -1,5 +1,5 @@
 {
-  "Version": "2.0.25",
+  "Version": "2.0.26",
   "FileType": 0,
   "Objects": [
     {
@@ -56,50 +56,6 @@
                   1,
                   1,
                   1
-                ],
-                "Tags": []
-              },
-              "Children": [],
-              "LinkedModel": null,
-              "IsLinkedChild": false
-            },
-            {
-              "Name": "Spawn",
-              "ClassName": "Part",
-              "ID": "cd4fb8a1-e184-4188-ac4d-be81abba8989",
-              "Properties": {
-                "Color": "ffffffff",
-                "Material": 2,
-                "IsSpawn": true,
-                "AngularVelocity": [
-                  0,
-                  0,
-                  0
-                ],
-                "Velocity": [
-                  0,
-                  0,
-                  0
-                ],
-                "Anchored": true,
-                "CanCollide": true,
-                "CollisionLayers": 1,
-                "CollisionMask": 1,
-                "RayPassthrough": 0,
-                "LocalPosition": [
-                  0,
-                  1,
-                  0
-                ],
-                "LocalRotation": [
-                  -0,
-                  0,
-                  0
-                ],
-                "LocalSize": [
-                  5,
-                  1,
-                  5
                 ],
                 "Tags": []
               },
@@ -170,9 +126,9 @@
                       0
                     ],
                     "LocalSize": [
-                      1,
-                      1,
-                      1
+                      0.001,
+                      0.001,
+                      0.001
                     ],
                     "Tags": []
                   },
@@ -182,6 +138,7 @@
                       "ClassName": "Marker3D",
                       "ID": "0ac3cad5-9885-41e1-976a-23a4c1ab319e",
                       "Properties": {
+                        "Visible": true,
                         "LocalPosition": [
                           0,
                           0,
@@ -193,9 +150,9 @@
                           0
                         ],
                         "LocalSize": [
-                          1,
-                          1,
-                          1
+                          0.001,
+                          0.001,
+                          0.001
                         ],
                         "Tags": []
                       },
@@ -218,14 +175,14 @@
                       0
                     ],
                     "LocalRotation": [
-                      -0,
+                      90,
                       0,
                       0
                     ],
                     "LocalSize": [
-                      1,
-                      1,
-                      1
+                      0.9999999,
+                      0.99999994,
+                      0.99999994
                     ],
                     "Tags": []
                   },
@@ -254,7 +211,7 @@
                         "RayPassthrough": 0,
                         "LocalPosition": [
                           0,
-                          0.49999985,
+                          0.50000006,
                           -6.9230725E-07
                         ],
                         "LocalRotation": [
@@ -297,8 +254,8 @@
                         "RayPassthrough": 0,
                         "LocalPosition": [
                           0,
-                          -0.50000036,
-                          -7.382042E-07
+                          -0.5000003,
+                          -7.3820473E-07
                         ],
                         "LocalRotation": [
                           90,
@@ -339,9 +296,9 @@
                         "CollisionMask": 1,
                         "RayPassthrough": 0,
                         "LocalPosition": [
-                          -0.5000001,
-                          2.3841858E-07,
-                          -7.1525574E-07
+                          -0.50000006,
+                          2.3841864E-07,
+                          -7.152557E-07
                         ],
                         "LocalRotation": [
                           90,
@@ -382,9 +339,9 @@
                         "CollisionMask": 1,
                         "RayPassthrough": 0,
                         "LocalPosition": [
-                          0.5000001,
-                          2.3841858E-07,
-                          -7.1525574E-07
+                          0.50000006,
+                          2.3841864E-07,
+                          -7.152557E-07
                         ],
                         "LocalRotation": [
                           90,
@@ -439,9 +396,9 @@
                       0
                     ],
                     "LocalSize": [
-                      1,
-                      1,
-                      1
+                      0.99999976,
+                      0.9999999,
+                      0.9999999
                     ],
                     "Tags": []
                   },
@@ -454,16 +411,16 @@
               "IsLinkedChild": false
             },
             {
-              "Name": "Baseplate",
+              "Name": "GlobalPath",
               "ClassName": "Part",
-              "ID": "00dfbee5-3674-4d2e-898f-6435dfa2b39b",
+              "ID": "9e5ecbd3-a909-47f6-b01e-e2e6ea931981",
               "Properties": {
-                "Color": "767e7dff",
+                "Color": "4f5554ff",
                 "Material": 5,
                 "AngularVelocity": [
                   0,
-                  0,
-                  0
+                  -0,
+                  -0
                 ],
                 "Velocity": [
                   0,
@@ -476,9 +433,9 @@
                 "CollisionMask": 1,
                 "RayPassthrough": 0,
                 "LocalPosition": [
-                  -200.25,
                   0,
-                  -200.25
+                  0,
+                  0
                 ],
                 "LocalRotation": [
                   -0,
@@ -486,141 +443,9 @@
                   0
                 ],
                 "LocalSize": [
-                  400.5,
-                  1,
-                  400.5
-                ],
-                "Locked": true,
-                "Tags": []
-              },
-              "Children": [],
-              "LinkedModel": null,
-              "IsLinkedChild": false
-            },
-            {
-              "Name": "Baseplate2",
-              "ClassName": "Part",
-              "ID": "406dc1a4-bf86-48a4-b1c6-329b86a2cd82",
-              "Properties": {
-                "Color": "767e7dff",
-                "Material": 5,
-                "AngularVelocity": [
-                  0,
-                  0,
-                  0
-                ],
-                "Velocity": [
-                  0,
-                  0,
-                  0
-                ],
-                "Anchored": true,
-                "CanCollide": true,
-                "CollisionLayers": 1,
-                "CollisionMask": 1,
-                "RayPassthrough": 0,
-                "LocalPosition": [
-                  200.25,
-                  0,
-                  -200.25
-                ],
-                "LocalRotation": [
-                  -0,
-                  0,
-                  0
-                ],
-                "LocalSize": [
-                  400.5,
-                  1,
-                  400.5
-                ],
-                "Locked": true,
-                "Tags": []
-              },
-              "Children": [],
-              "LinkedModel": null,
-              "IsLinkedChild": false
-            },
-            {
-              "Name": "Baseplate3",
-              "ClassName": "Part",
-              "ID": "a3b70a3a-8689-4283-8ff1-abdb162275a5",
-              "Properties": {
-                "Color": "767e7dff",
-                "Material": 5,
-                "AngularVelocity": [
-                  0,
-                  0,
-                  0
-                ],
-                "Velocity": [
-                  0,
-                  0,
-                  0
-                ],
-                "Anchored": true,
-                "CanCollide": true,
-                "CollisionLayers": 1,
-                "CollisionMask": 1,
-                "RayPassthrough": 0,
-                "LocalPosition": [
-                  -200.25,
-                  0,
-                  200.25
-                ],
-                "LocalRotation": [
-                  -0,
-                  0,
-                  0
-                ],
-                "LocalSize": [
-                  400.5,
-                  1,
-                  400.5
-                ],
-                "Locked": true,
-                "Tags": []
-              },
-              "Children": [],
-              "LinkedModel": null,
-              "IsLinkedChild": false
-            },
-            {
-              "Name": "Baseplate4",
-              "ClassName": "Part",
-              "ID": "37560fa2-7d70-4667-b271-8ea2847ac72f",
-              "Properties": {
-                "Color": "767e7dff",
-                "Material": 5,
-                "AngularVelocity": [
-                  0,
-                  0,
-                  0
-                ],
-                "Velocity": [
-                  0,
-                  0,
-                  0
-                ],
-                "Anchored": true,
-                "CanCollide": true,
-                "CollisionLayers": 1,
-                "CollisionMask": 1,
-                "RayPassthrough": 0,
-                "LocalPosition": [
-                  200.25,
-                  0,
-                  200.25
-                ],
-                "LocalRotation": [
-                  -0,
-                  0,
-                  0
-                ],
-                "LocalSize": [
-                  400.5,
-                  1,
-                  400.5
+                  32,
+                  0.5,
+                  32
                 ],
                 "Locked": true,
                 "Tags": []
@@ -753,6 +578,17 @@
               "Name": "MassDelete",
               "ClassName": "NetworkEvent",
               "ID": "669740f9-31bc-49a6-ab7f-bb6a294426ae",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "MassDeleteSS",
+              "ClassName": "BindableEvent",
+              "ID": "0c411e7f-b4eb-4d6a-a229-f3a18dc2b647",
               "Properties": {
                 "Tags": []
               },
@@ -1163,20 +999,6 @@
                   "IsLinkedChild": false
                 },
                 {
-                  "Name": "Version",
-                  "ClassName": "ModuleScript",
-                  "ID": "b9c9d2eb-98a5-481d-a938-d8f234ec7687",
-                  "Properties": {
-                    "Compatibility": false,
-                    "IsEnabled": true,
-                    "LinkedScript": "e8bd263c-b608-47b7-93c1-4f6871b2d692",
-                    "Tags": []
-                  },
-                  "Children": [],
-                  "LinkedModel": null,
-                  "IsLinkedChild": false
-                },
-                {
                   "Name": "Achievements",
                   "ClassName": "ServerScript",
                   "ID": "6927a590-985a-45a7-9a43-e6da90723073",
@@ -1184,6 +1006,34 @@
                     "Compatibility": false,
                     "IsEnabled": true,
                     "LinkedScript": "315d40da-893f-4377-be57-c6aeb0b43e31",
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Plots",
+                  "ClassName": "ServerScript",
+                  "ID": "a0a3bcc9-eb75-473b-8beb-005d5d3a040b",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "d9c82802-937d-4df7-a1e2-98f927cb4fb2",
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Version",
+                  "ClassName": "ModuleScript",
+                  "ID": "b9c9d2eb-98a5-481d-a938-d8f234ec7687",
+                  "Properties": {
+                    "Compatibility": false,
+                    "IsEnabled": true,
+                    "LinkedScript": "e8bd263c-b608-47b7-93c1-4f6871b2d692",
                     "Tags": []
                   },
                   "Children": [],
@@ -1755,7 +1605,375 @@
           "Properties": {
             "Tags": []
           },
-          "Children": [],
+          "Children": [
+            {
+              "Name": "Archive",
+              "ClassName": "Folder",
+              "ID": "2b2661a4-f90d-4850-97d0-099e7d15a820",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [
+                {
+                  "Name": "Baseplate4",
+                  "ClassName": "Part",
+                  "ID": "37560fa2-7d70-4667-b271-8ea2847ac72f",
+                  "Properties": {
+                    "Color": "767e7dff",
+                    "Material": 5,
+                    "AngularVelocity": [
+                      0,
+                      -0,
+                      -0
+                    ],
+                    "Velocity": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "Anchored": true,
+                    "CanCollide": true,
+                    "CollisionLayers": 1,
+                    "CollisionMask": 1,
+                    "RayPassthrough": 0,
+                    "LocalPosition": [
+                      200.25,
+                      0,
+                      200.25
+                    ],
+                    "LocalRotation": [
+                      -0,
+                      0,
+                      0
+                    ],
+                    "LocalSize": [
+                      400.5,
+                      1,
+                      400.5
+                    ],
+                    "Locked": true,
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Baseplate3",
+                  "ClassName": "Part",
+                  "ID": "a3b70a3a-8689-4283-8ff1-abdb162275a5",
+                  "Properties": {
+                    "Color": "767e7dff",
+                    "Material": 5,
+                    "AngularVelocity": [
+                      0,
+                      -0,
+                      -0
+                    ],
+                    "Velocity": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "Anchored": true,
+                    "CanCollide": true,
+                    "CollisionLayers": 1,
+                    "CollisionMask": 1,
+                    "RayPassthrough": 0,
+                    "LocalPosition": [
+                      -200.25,
+                      0,
+                      200.25
+                    ],
+                    "LocalRotation": [
+                      -0,
+                      0,
+                      0
+                    ],
+                    "LocalSize": [
+                      400.5,
+                      1,
+                      400.5
+                    ],
+                    "Locked": true,
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Baseplate2",
+                  "ClassName": "Part",
+                  "ID": "406dc1a4-bf86-48a4-b1c6-329b86a2cd82",
+                  "Properties": {
+                    "Color": "767e7dff",
+                    "Material": 5,
+                    "AngularVelocity": [
+                      0,
+                      -0,
+                      -0
+                    ],
+                    "Velocity": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "Anchored": true,
+                    "CanCollide": true,
+                    "CollisionLayers": 1,
+                    "CollisionMask": 1,
+                    "RayPassthrough": 0,
+                    "LocalPosition": [
+                      200.25,
+                      0,
+                      -200.25
+                    ],
+                    "LocalRotation": [
+                      -0,
+                      0,
+                      0
+                    ],
+                    "LocalSize": [
+                      400.5,
+                      1,
+                      400.5
+                    ],
+                    "Locked": true,
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Baseplate",
+                  "ClassName": "Part",
+                  "ID": "00dfbee5-3674-4d2e-898f-6435dfa2b39b",
+                  "Properties": {
+                    "Color": "767e7dff",
+                    "Material": 5,
+                    "AngularVelocity": [
+                      0,
+                      -0,
+                      -0
+                    ],
+                    "Velocity": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "Anchored": true,
+                    "CanCollide": true,
+                    "CollisionLayers": 1,
+                    "CollisionMask": 1,
+                    "RayPassthrough": 0,
+                    "LocalPosition": [
+                      -200.25,
+                      0,
+                      -200.25
+                    ],
+                    "LocalRotation": [
+                      -0,
+                      0,
+                      0
+                    ],
+                    "LocalSize": [
+                      400.5,
+                      1,
+                      400.5
+                    ],
+                    "Locked": true,
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Spawn",
+                  "ClassName": "Part",
+                  "ID": "cd4fb8a1-e184-4188-ac4d-be81abba8989",
+                  "Properties": {
+                    "Color": "ffffffff",
+                    "Material": 2,
+                    "IsSpawn": true,
+                    "AngularVelocity": [
+                      0,
+                      -0,
+                      -0
+                    ],
+                    "Velocity": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "Anchored": true,
+                    "CanCollide": true,
+                    "CollisionLayers": 1,
+                    "CollisionMask": 1,
+                    "RayPassthrough": 0,
+                    "LocalPosition": [
+                      0,
+                      1,
+                      0
+                    ],
+                    "LocalRotation": [
+                      -0,
+                      0,
+                      0
+                    ],
+                    "LocalSize": [
+                      5,
+                      1,
+                      5
+                    ],
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                }
+              ],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Plot",
+              "ClassName": "Folder",
+              "ID": "57ca778b-34e7-4035-bcda-787f48152b3d",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [
+                {
+                  "Name": "PlotGround",
+                  "ClassName": "Part",
+                  "ID": "d813627b-c6fd-4edd-9d55-d90604b296d8",
+                  "Properties": {
+                    "Color": "767e7dff",
+                    "Material": 5,
+                    "AngularVelocity": [
+                      0,
+                      -0,
+                      -0
+                    ],
+                    "Velocity": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "Anchored": true,
+                    "CanCollide": true,
+                    "CollisionLayers": 1,
+                    "CollisionMask": 1,
+                    "RayPassthrough": 0,
+                    "LocalPosition": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "LocalRotation": [
+                      -0,
+                      0,
+                      0
+                    ],
+                    "LocalSize": [
+                      64,
+                      1,
+                      64
+                    ],
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "Path1",
+                  "ClassName": "Part",
+                  "ID": "faccd7d7-7f89-46bf-b640-b8b2bf45be11",
+                  "Properties": {
+                    "Color": "5d6463ff",
+                    "Material": 5,
+                    "AngularVelocity": [
+                      0,
+                      -0,
+                      -0
+                    ],
+                    "Velocity": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "Anchored": true,
+                    "CanCollide": true,
+                    "CollisionLayers": 1,
+                    "CollisionMask": 1,
+                    "RayPassthrough": 0,
+                    "LocalPosition": [
+                      0,
+                      0,
+                      64
+                    ],
+                    "LocalRotation": [
+                      -0,
+                      0,
+                      0
+                    ],
+                    "LocalSize": [
+                      32,
+                      0.5,
+                      64
+                    ],
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                },
+                {
+                  "Name": "OwnerText",
+                  "ClassName": "Text3D",
+                  "ID": "f5ffcb67-fece-4d37-9235-c1ac8abd6416",
+                  "Properties": {
+                    "Color": "ffffffff",
+                    "FaceCamera": true,
+                    "FixedSize": false,
+                    "FontSize": 64,
+                    "HorizontalAlignment": 1,
+                    "OutlineColor": "000000ff",
+                    "OutlineWidth": 0,
+                    "Text": "",
+                    "UseRichText": false,
+                    "VerticalAlignment": 1,
+                    "Visible": true,
+                    "LocalPosition": [
+                      0,
+                      64,
+                      0
+                    ],
+                    "LocalRotation": [
+                      -0,
+                      0,
+                      0
+                    ],
+                    "LocalSize": [
+                      1,
+                      1,
+                      1
+                    ],
+                    "Tags": []
+                  },
+                  "Children": [],
+                  "LinkedModel": null,
+                  "IsLinkedChild": false
+                }
+              ],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            }
+          ],
           "LinkedModel": null,
           "IsLinkedChild": false
         },
@@ -1775,7 +1993,7 @@
             "MaxStamina": 3,
             "MovementMode": 0,
             "RespawnTime": 5,
-            "SprintSpeed": 40,
+            "SprintSpeed": 50,
             "Stamina": 0,
             "StaminaBurn": 1.2,
             "StaminaEnabled": false,
@@ -1791,6 +2009,17 @@
               "Name": "Inventory",
               "ClassName": "Inventory",
               "ID": "3eea1a9c-a2cd-4666-998f-a5238187e8d6",
+              "Properties": {
+                "Tags": []
+              },
+              "Children": [],
+              "LinkedModel": null,
+              "IsLinkedChild": false
+            },
+            {
+              "Name": "Plot",
+              "ClassName": "InstanceValue",
+              "ID": "c603a314-1f06-4214-a37c-a74fbe50f732",
               "Properties": {
                 "Tags": []
               },

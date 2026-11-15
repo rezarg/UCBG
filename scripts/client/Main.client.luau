@@ -3,30 +3,43 @@ local Blocks = require(ScriptService.Blocks)
 
 Tools.Init()
 
+local player = Players.LocalPlayer
 local camera: Camera = Environment.CurrentCamera
 
 local selectedTool: Tools.Tool? = nil
 local selectedBlockDef: Blocks.BlockDef? = nil
 local insertPosition = Vector3.Zero
+local toolButtons = {}
 
-local blockGhost: Part = Environment.Ignore.BlockGhost
 local selectionHighlight: UIStroke = script.UIStroke
 local selectionFace: Model = Environment.Ignore.SelectionFace
+local blockGhost: Part = Environment.Ignore.BlockGhost
+blockGhost.Parent = Hidden
 
 local sinkPlace = false
 local placementsPerSecond = 0
 
+local plotRef: InstanceValue = player:WaitChild("Plot")
+repeat
+	wait(0.5)
+until plotRef.Value
+
+local plot = plotRef.Value
+local plotGround: Part = plot.PlotGround
+
 local networkPlaceBlock: NetworkEvent = ScriptService.PlaceBlock
 
+local gridOffset = Vector3.New(0.5, 0, 0.5)
 local function GridVector3(original: Vector3, grid: number?): Vector3
 	if not grid then
 		grid = 1
 	end
+
+	original -= gridOffset
 	local x = math.round(original.X * grid) / grid
 	local y = math.round(original.Y * grid) / grid
 	local z = math.round(original.Z * grid) / grid
-
-	return Vector3.New(x, y, z)
+	return Vector3.New(x, y, z) + gridOffset
 end
 
 Hooks.Updated:Connect(function(_: number)
@@ -53,7 +66,21 @@ Hooks.Updated:Connect(function(_: number)
 	end
 end)
 
-local toolButtons = {}
+local function Vector3InRange(value: Vector3, range: { Min: Vector3, Max: Vector3 })
+	if value.X < range.Min.X or value.X > range.Max.X then
+		return false
+	end
+
+	if value.Y < range.Min.Y or value.Y > range.Max.Y then
+		return false
+	end
+
+	if value.Z < range.Min.Z or value.Z > range.Max.Z then
+		return false
+	end
+
+	return true
+end
 
 Input.KeyDown:Connect(function(key: KeyCode, focused: boolean)
 	if not focused then
@@ -102,32 +129,51 @@ Input.KeyDown:Connect(function(key: KeyCode, focused: boolean)
 			blockGhost.Color = Color.New(blockDef.Color.R, blockDef.Color.G, blockDef.Color.B, 0.5)
 			local button = PlayerGUI.Main.Toolbars.Blocks[blockDef.Name:gsub("[%(%)]", "_")]
 			selectionHighlight.Parent = button or Hidden
-			wait(0.1) -- Previously 0.3
+			wait(0.1)
 			if sinkPlace == sp then
 				sinkPlace = false
 			end
 		end
 	end
 
-	if key == Enums.KeyCode.MouseLeft and placementsPerSecond < 4 then
+	if key == Enums.KeyCode.MouseLeft and placementsPerSecond < 10 then
 		wait(0.05)
+
 		if selectedTool and selectedTool.LeftMouseDown then
 			selectedTool:LeftMouseDown()
 		end
 
 		if selectedBlockDef and not sinkPlace then
-			local distanceFromSpawn = Vector3.Distance(Vector3.Zero, insertPosition)
-			if distanceFromSpawn < 16 then
-				Chat:UnicastMessage("[Server]: Too close to spawn!", Players.LocalPlayer)
-				return
+			local plotPos = plotGround.Position
+			local plotSize = plotGround.Size
+			local plotRange = {
+				Min = Vector3.New(plotPos.X - plotSize.X / 2, plotPos.Y, plotPos.Z - plotSize.Z / 2),
+				Max = Vector3.New(plotPos.X + plotSize.X / 2, plotPos.Y + 128, plotPos.Z + plotSize.Z / 2),
+			}
+
+			local placementType: "invalid" | "plot" | "global" = "invalid"
+
+			if Vector3InRange(insertPosition, plotRange) then
+				placementType = "plot"
+			elseif
+				Vector3InRange(insertPosition, {
+					Min = Vector3.New(-64, 0, -64),
+					Max = Vector3.New(64, 64, 64),
+				})
+			then
+				placementType = "global"
 			end
 
-			local message = NetMessage.New()
-			message:AddInt("BlockId", selectedBlockDef.Id)
-			message:AddVector3("InsertPosition", insertPosition)
-			networkPlaceBlock:InvokeServer(message)
-
-			placementsPerSecond += 1
+			if placementType ~= "invalid" then
+				local message = NetMessage.New()
+				message:AddInt("BlockId", selectedBlockDef.Id)
+				message:AddVector3("InsertPosition", insertPosition)
+				message:AddString("PlacementType", placementType)
+				networkPlaceBlock:InvokeServer(message)
+				placementsPerSecond += 1
+			else
+				Chat:UnicastMessage("[ERROR]: You cannot place blocks there!", player)
+			end
 		end
 	end
 end)
@@ -143,6 +189,7 @@ Input.KeyUp:Connect(function(key: KeyCode, focused: boolean)
 	end
 end)
 
+-- Load Blocks
 for _, blockDef in Blocks.GetDefinitionsSorted() do
 	local button: UIButton = script.UIButton:Clone(PlayerGUI.Main.Toolbars.Blocks)
 	button.Name = blockDef.Name:gsub("[%(%)]", "_")
@@ -168,13 +215,14 @@ for _, blockDef in Blocks.GetDefinitionsSorted() do
 		blockGhost.Parent = Environment.Ignore
 		blockGhost.Color = Color.New(blockDef.Color.R, blockDef.Color.G, blockDef.Color.B, 0.5)
 		selectionHighlight.Parent = button
-		wait(0.1) -- Previously 0.3
+		wait(0.1)
 		if sinkPlace == sp then
 			sinkPlace = false
 		end
 	end)
 end
 
+-- Load Tools
 for _, tool in Tools.GetToolsSorted() do
 	local button: UIButton = script.UIButton:Clone(PlayerGUI.Main.Toolbars.Tools)
 	toolButtons[tool] = button
@@ -203,8 +251,7 @@ for _, tool in Tools.GetToolsSorted() do
 	end)
 end
 
-spawn(function()
-	while wait(1) do
-		placementsPerSecond = 0
-	end
-end)
+-- Placement rate limiting
+while wait(1) do
+	placementsPerSecond = 0
+end

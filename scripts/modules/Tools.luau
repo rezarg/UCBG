@@ -26,6 +26,8 @@ local networkShortCircuit: NetworkEvent = ScriptService.ShortCircuit
 
 local selectedBlocks = {}
 local selectionMoveBase = Vector3.Zero
+local selectionMin = Vector3.Zero
+local selectionMax = Vector3.Zero
 
 local selectionBox3D = Environment.Ignore.SelectionBox3D
 
@@ -137,15 +139,31 @@ local function SortKeys(dict: { [string]: any }): { [string]: any }
 	return res
 end
 
+local gridOffset = Vector3.New(0.5, 0, 0.5)
 local function GridVector3(original: Vector3, grid: number?): Vector3
 	if not grid then
 		grid = 1
 	end
+
+	original -= gridOffset
 	local x = math.round(original.X * grid) / grid
 	local y = math.round(original.Y * grid) / grid
 	local z = math.round(original.Z * grid) / grid
+	return Vector3.New(x, y, z) + gridOffset
+end
 
-	return Vector3.New(x, y, z)
+local function Vec3RangeFits(inner: { Min: Vector3, Max: Vector3 }, container: { Min: Vector3, Max: Vector3 })
+	if inner.Min.X < container.Min.X or inner.Max.X > container.Max.X then
+		return false
+	end
+	if inner.Min.Y < container.Min.Y or inner.Max.Y > container.Max.Y then
+		return false
+	end
+	if inner.Min.Z < container.Min.Z or inner.Max.Z > container.Max.Z then
+		return false
+	end
+
+	return true
 end
 
 Tools.SinkMouseClicks = false
@@ -659,6 +677,8 @@ Definitions.Select = {
 			selectionMoveBase = Vector3.New(minX, minY, minZ)
 			self.Data.MinPoint = Vector3.New(minX, minY, minZ)
 			self.Data.MaxPoint = Vector3.New(maxX, maxY, maxZ)
+			selectionMin = self.Data.MinPoint
+			selectionMax = self.Data.MaxPoint
 
 			if #selectedBlocks == 0 then
 				selectionBox3D.Position = Vector3.Zero
@@ -774,9 +794,33 @@ Definitions.Move = {
 		acceptMoveButton.MouseDown:Connect(function()
 			Tools.SinkMouseFor(0.05)
 
+			local plot: InstanceValue = Players.LocalPlayer.Plot.Value
+			local plotGround: Part = plot.PlotGround
+
+			local targetRange = {
+				Min = selectionMin + self.Data.MoveOffset,
+				Max = selectionMax + self.Data.MoveOffset,
+			}
+
+			if
+				not Vec3RangeFits(targetRange, { -- Target is inside plot
+					Min = plotGround.Position - Vector3.New(plotGround.Size.X / 2, 0, plotGround.Size.Z / 2),
+					Max = plotGround.Position + Vector3.New(plotGround.Size.X / 2, 128, plotGround.Size.Z / 2),
+				})
+				and not Vec3RangeFits(targetRange, { -- Target is inside global plot
+					Min = Vector3.New(-64, 0, -64),
+					Max = Vector3.New(64, 64, 64),
+				})
+			then
+				Chat:UnicastMessage("[ERROR]: Move target is out of bounds.", Players.LocalPlayer)
+				return
+			end
+
 			acceptMoveButton.Visible = false
 			self.Data.CanMove = false
 			selectionMoveBase += self.Data.MoveOffset
+			selectionMin += self.Data.MoveOffset
+			selectionMax += self.Data.MoveOffset
 			local _, _ = pcall(function()
 				local selectedUUIDs = {}
 				for i, v in selectedBlocks do
@@ -887,6 +931,58 @@ Definitions.Import = {
 			selectionBox3D.Marker3D.LocalPosition = Vector3.Zero
 			selectionBox3D.Marker3D.AppearOnTop = false
 			PlayerGUI.Main.TopbarText.Text = ""
+
+			local plot: InstanceValue = Players.LocalPlayer.Plot.Value
+			local plotGround: Part = plot.PlotGround
+
+			-- Polytoria made Vector3s read-only, 🥀
+			local min = { X = math.huge, Y = math.huge, Z = math.huge }
+			local max = { X = -math.huge, Y = -math.huge, Z = -math.huge }
+
+			local data = json:parse(PlayerGUI.Main.ImportBox.Text)
+			for i, v in data[5] do
+				local position = self.Data.Position + Vector3.New(v[2], v[3], v[4])
+				if position.X < min.X then
+					min.X = position.X
+				end
+				if position.X > max.X then
+					max.X = position.X
+				end
+				if position.Y < min.Y then
+					min.Y = position.Y
+				end
+				if position.Y > max.Y then
+					max.Y = position.Y
+				end
+				if position.Z < min.Z then
+					min.Z = position.Z
+				end
+				if position.Z > max.Z then
+					max.Z = position.Z
+				end
+				if i % 100 == 0 then
+					wait()
+				end
+			end
+
+			min = Vector3.New(min.X, min.Y, min.Z)
+			max = Vector3.New(max.X, max.Y, max.Z)
+
+			local targetRange = { Min = min, Max = max }
+
+			if
+				not Vec3RangeFits(targetRange, { -- Target is inside plot
+					Min = plotGround.Position - Vector3.New(plotGround.Size.X / 2, 0, plotGround.Size.Z / 2),
+					Max = plotGround.Position + Vector3.New(plotGround.Size.X / 2, 128, plotGround.Size.Z / 2),
+				})
+				and not Vec3RangeFits(targetRange, { -- Target is inside global plot
+					Min = Vector3.New(-64, 0, -64),
+					Max = Vector3.New(64, 64, 64),
+				})
+			then
+				Chat:UnicastMessage("[ERROR]: Import target is out of bounds.", Players.LocalPlayer)
+				return
+			end
 
 			local message = NetMessage.New()
 			message:AddString("Data", PlayerGUI.Main.ImportBox.Text)
