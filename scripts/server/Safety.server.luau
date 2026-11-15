@@ -20,7 +20,19 @@ local function RFC3339(s: string)
 	return t
 end
 
+local singleplayer
+
 Players.PlayerAdded:Connect(function(player: Player)
+	if singleplayer == nil then
+		repeat
+			wait()
+		until singleplayer ~= nil
+	end
+
+	if singleplayer then -- Disable account requirements for singleplayer servers
+		return
+	end
+
 	local info = Http:GetAsync(`https://api.polytoria.com/v1/users/{player.UserID}`)
 	info = json:parse(info)
 
@@ -34,3 +46,8 @@ Players.PlayerAdded:Connect(function(player: Player)
 		end
 	end
 end)
+
+repeat
+	singleplayer = world.Shared.Singleplayer
+	wait()
+until singleplayer ~= nil

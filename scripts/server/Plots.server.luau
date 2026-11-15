@@ -1,4 +1,20 @@
-local serverSize = 8
+local success, res
+repeat
+	success, res = pcall(function()
+		return json.parse(Http:GetAsync(`https://api.polytoria.com/v1/places/{world.WorldID}`))
+	end)
+	if not success then
+		wait(1)
+	end
+until success
+
+if res.errors then -- Creator playtest, WorldID doesn't exist
+	res.maxPlayers = 1
+end
+
+world.Shared.Singleplayer = res.maxPlayers == 1
+
+local serverSize = res.maxPlayers
 local plotRadius = 192
 
 local prefab: Folder = ServerHidden.Plot
@@ -12,11 +28,20 @@ do
 
 	local plotGround: Part = plot.PlotGround
 	plotGround.Position = Vector3.Zero
-	plotGround.Size = Vector3.New(128, 1, 128)
+
+	if world.Shared.Singleplayer then
+		plotGround.Size = Vector3.New(512, 1, 512)
+	else
+		plotGround.Size = Vector3.New(128, 1, 128)
+	end
 
 	local plotPath: Part = plot.Path1
 	plotPath.Position = Vector3.Zero
 	plotPath.Size = Vector3.New(144, 0.75, 144)
+end
+
+if world.Shared.Singleplayer then
+	return
 end
 
 Environment.GlobalPath.Size = Vector3.New(plotRadius * 2 - 32, 0.25, plotRadius * 2 - 32)
