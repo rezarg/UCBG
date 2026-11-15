@@ -797,6 +797,25 @@ Definitions.Move = {
 			local plot: InstanceValue = Players.LocalPlayer.Plot.Value
 			local plotGround: Part = plot.PlotGround
 
+			local sourceRange = {
+				Min = selectionMin,
+				Max = selectionMax,
+			}
+
+			if
+				not Vec3RangeFits(sourceRange, { -- Source is inside plot
+					Min = plotGround.Position - Vector3.New(plotGround.Size.X / 2, 0, plotGround.Size.Z / 2),
+					Max = plotGround.Position + Vector3.New(plotGround.Size.X / 2, 128, plotGround.Size.Z / 2),
+				})
+				and not Vec3RangeFits(sourceRange, { -- Source is inside global plot
+					Min = Vector3.New(-64, 0, -64),
+					Max = Vector3.New(64, 64, 64),
+				})
+			then
+				Chat:UnicastMessage("[ERROR]: Move source is out of bounds.", Players.LocalPlayer)
+				return
+			end
+
 			local targetRange = {
 				Min = selectionMin + self.Data.MoveOffset,
 				Max = selectionMax + self.Data.MoveOffset,
