@@ -2,9 +2,9 @@
 	"luau-lsp.platform.type": "standard",
 	"luau-lsp.types.definitionFiles": {
 		"@poly": "./.poly/luau/def.d.luau",
-    },
+	},
 	"files.exclude": {
 		"**/*.meta": true
-    },
-    "stylua.targetReleaseVersion": "latest"
+	},
+	"stylua.targetReleaseVersion": "latest"
 }
