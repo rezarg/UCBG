@@ -21,6 +21,22 @@ local prefab: Folder = ServerHidden.Plot
 
 local networkMassDeleteSS: BindableEvent = ScriptService.MassDeleteSS
 
+local manualPlotPlacements = {}
+manualPlotPlacements[8] = {
+	Distance = 144,
+	Size = 128,
+	Positions = {
+		Vector3.New(-1, 0, -1),
+		Vector3.New(0, 0, -1),
+		Vector3.New(1, 0, -1),
+		Vector3.New(1, 0, 0),
+		Vector3.New(1, 0, 1),
+		Vector3.New(0, 0, 1),
+		Vector3.New(-1, 0, 1),
+		Vector3.New(-1, 0, 0),
+	},
+}
+
 -- Initialize Global Plot
 do
 	local plot = prefab:Clone(Environment)
@@ -38,6 +54,7 @@ do
 	local plotPath: Part = plot.Path1
 	plotPath.Position = Vector3.Zero
 	plotPath.Size = Vector3.New(144, 0.75, 144)
+	plotPath.Color = Color.New(plotPath.Color.R * 0.95, plotPath.Color.G * 0.95, plotPath.Color.B * 0.95, 1)
 end
 
 Environment.GlobalPath.Size = Vector3.New(plotRadius * 2 - 32, 0.25, plotRadius * 2 - 32)
@@ -49,17 +66,24 @@ if serverSize > 1 then
 		local plot = prefab:Clone(Environment)
 		plot.Name = `Plot{i}`
 
-		local theta = math.pi * 2 * (i / serverSize)
-
 		local plotGround: Part = plot.PlotGround
-		plotGround.Size = Vector3.New(80, 1, 80)
-		plotGround.Position =
-			Vector3.New(math.round(math.cos(theta) * plotRadius), 0, math.round(math.sin(theta) * plotRadius))
-
 		local plotPath: Part = plot.Path1
-		plotPath.Position = plotGround.Position
 		plotPath.Size = Vector3.New(144, 0.5, 144)
 
+		if not manualPlotPlacements[serverSize] then -- Procedural Placement, saving for later just in case
+			local theta = math.pi * 2 * (i / serverSize)
+
+			plotGround.Size = Vector3.New(80, 1, 80)
+			plotGround.Position =
+				Vector3.New(math.round(math.cos(theta) * plotRadius), 0, math.round(math.sin(theta) * plotRadius))
+		else
+			plotGround.Size =
+				Vector3.New(manualPlotPlacements[serverSize].Size, 1, manualPlotPlacements[serverSize].Size)
+			plotGround.Position = manualPlotPlacements[serverSize].Positions[i]
+				* manualPlotPlacements[serverSize].Distance
+		end
+
+		plotPath.Position = plotGround.Position
 		plot.OwnerText.Position = plotGround.Position + Vector3.New(0, 64, 0)
 
 		plots[i] = { Owner = nil, Ref = plot }
