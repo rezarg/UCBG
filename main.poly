@@ -1339,7 +1339,7 @@
                     "Placeholder": "Type",
                     "PlaceholderColor": "a7a7a78a",
                     "ReadOnly": false,
-                    "ReadOnlyColor": "00000033",
+                    "ReadOnlyColor": "a7a7a7ff",
                     "Text": "0",
                     "TextColor": "ffffffff",
                     "BorderColor": "000000ff",

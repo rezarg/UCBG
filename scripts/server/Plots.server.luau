@@ -9,7 +9,7 @@ repeat
 until success
 
 if res.errors then -- Creator playtest, WorldID doesn't exist
-	res.maxPlayers = 1
+	res.maxPlayers = 8
 end
 
 world.Shared.Singleplayer = res.maxPlayers == 1

@@ -275,9 +275,9 @@ networkDestroyBlock.InvokedServer:Connect(function(player: Player, message: NetM
 	if
 		not owner -- No Owner,
 		or player == owner -- Player's own block,
-		or Vector3InRange(block.Instance.Position, { -- Source is inside global plot
+		or Vector3InRange(block.Instance.Position, { -- Block is inside global plot
 			Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
-			Max = globalPlotGround.Position + globalPlotGround.Size * Vector3.New(0.5, 0, 0.5) + Vector3.Up * 64,
+			Max = globalPlotGround.Position + globalPlotGround.Size * Vector3.New(0.5, 0, 0.5) + Vector3.Up * 128,
 		})
 	then
 		DestroyBlock(block)
@@ -291,13 +291,38 @@ networkMakeConnection.InvokedServer:Connect(function(player: Player, message: Ne
 	local fromUUID = message:GetInt("From")
 	local toUUID = message:GetInt("To")
 
+	local globalPlot = Environment:WaitChild("PlotGlobal")
+	local globalPlotGround: Part = globalPlot.PlotGround
+
 	local fromBlock = GetBlockByUUID(fromUUID)
 	if not fromBlock then
 		return
 	end
 
+	if
+		player ~= GetOwner(fromBlock)
+		and not Vector3InRange(fromBlock.Instance.Position, { -- Block is inside global plot
+			Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
+			Max = globalPlotGround.Position + globalPlotGround.Size * Vector3.New(0.5, 0, 0.5) + Vector3.Up * 128,
+		})
+	then
+		Chat:UnicastMessage("[ERROR]: You cannot form this connection.", player)
+		return
+	end
+
 	local toBlock = GetBlockByUUID(toUUID)
 	if not toBlock then
+		return
+	end
+
+	if
+		player ~= GetOwner(fromBlock)
+		and not Vector3InRange(toBlock.Instance.Position, { -- Block is inside global plot
+			Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
+			Max = globalPlotGround.Position + globalPlotGround.Size * Vector3.New(0.5, 0, 0.5) + Vector3.Up * 128,
+		})
+	then
+		Chat:UnicastMessage("[ERROR]: You cannot form this connection.", player)
 		return
 	end
 
@@ -497,6 +522,9 @@ end)
 local function MassDeleteByUUIDs(uuids: { number }, player: Player?)
 	local connectionCount = 0
 
+	local globalPlot = Environment:WaitChild("PlotGlobal")
+	local globalPlotGround: Part = globalPlot.PlotGround
+
 	for i, v in uuids do
 		local block = GetBlockByUUID(v)
 		if not block then
@@ -506,9 +534,9 @@ local function MassDeleteByUUIDs(uuids: { number }, player: Player?)
 		if
 			not owner -- No Owner,
 			or player == owner -- Player's own block,
-			or Vector3InRange(block.Instance.Position, { -- Or block is in Global Plot
-				Min = Vector3.New(-64, 0, -64),
-				Max = Vector3.New(64, 64, 64),
+			or Vector3InRange(block.Instance.Position, { -- Block is inside global plot
+				Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
+				Max = globalPlotGround.Position + globalPlotGround.Size * Vector3.New(0.5, 0, 0.5) + Vector3.Up * 128,
 			})
 		then
 			DestroyBlock(block)

@@ -169,6 +169,22 @@ local function Vec3RangeFits(inner: { Min: Vector3, Max: Vector3 }, container: {
 	return true
 end
 
+local function Vector3InRange(value: Vector3, range: { Min: Vector3, Max: Vector3 })
+	if value.X < range.Min.X or value.X > range.Max.X then
+		return false
+	end
+
+	if value.Y < range.Min.Y or value.Y > range.Max.Y then
+		return false
+	end
+
+	if value.Z < range.Min.Z or value.Z > range.Max.Z then
+		return false
+	end
+
+	return true
+end
+
 Tools.SinkMouseClicks = false
 function Tools.SinkMouseFor(length: number)
 	local smc = tick()
@@ -366,8 +382,17 @@ Definitions.Inspect = {
 			end
 
 			local keys = SortKeys(properties)
-
 			local owner = GetInstanceOwner(result.Instance)
+
+			local canEdit = not owner
+				or owner == Players.LocalPlayer
+				or Vector3InRange(result.Instance.Position, { -- Block is inside global plot
+					Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
+					Max = globalPlotGround.Position
+						+ globalPlotGround.Size * Vector3.New(0.5, 0, 0.5)
+						+ Vector3.Up * 128,
+				})
+
 			local ownerItem = Hidden.PropertyReadOnly:Clone(items)
 			ownerItem.Left.Text = "Owner: "
 			if owner then
@@ -393,22 +418,26 @@ Definitions.Inspect = {
 				local varType = "any" -- TODO
 				input.Placeholder = varType
 
-				local before = nil
-				input.FocusEnter:Connect(function()
-					before = input.Text
-				end)
-				input.Submitted:Connect(function(_: string)
-					if input.Text ~= before then
-						input.Text = SetProperty(uuid, k, varType, input.Text, before)
+				if canEdit then
+					local before
+					input.FocusEnter:Connect(function()
 						before = input.Text
-					end
-				end)
-				input.FocusExit:Connect(function()
-					if input.Text ~= before then
-						input.Text = SetProperty(uuid, k, varType, input.Text, before)
-						before = input.Text
-					end
-				end)
+					end)
+					input.Submitted:Connect(function(_: string)
+						if input.Text ~= before then
+							input.Text = SetProperty(uuid, k, varType, input.Text, before)
+							before = input.Text
+						end
+					end)
+					input.FocusExit:Connect(function()
+						if input.Text ~= before then
+							input.Text = SetProperty(uuid, k, varType, input.Text, before)
+							before = input.Text
+						end
+					end)
+				else
+					input.ReadOnly = true
+				end
 			end
 		elseif result.Instance.Parent == Environment.Connections then
 			local inspectPanel = PlayerGUI.Main.InspectPanel
@@ -814,7 +843,7 @@ Definitions.Move = {
 					Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
 					Max = globalPlotGround.Position
 						+ globalPlotGround.Size * Vector3.New(0.5, 0, 0.5)
-						+ Vector3.Up * 64,
+						+ Vector3.Up * 128,
 				})
 			then
 				Chat:UnicastMessage("[ERROR]: Move source is out of bounds.", Players.LocalPlayer)
@@ -831,11 +860,11 @@ Definitions.Move = {
 					Min = plotGround.Position - Vector3.New(plotGround.Size.X / 2, 0, plotGround.Size.Z / 2),
 					Max = plotGround.Position + Vector3.New(plotGround.Size.X / 2, 128, plotGround.Size.Z / 2),
 				})
-				and not Vec3RangeFits(sourceRange, { -- Source is inside global plot
+				and not Vec3RangeFits(targetRange, { -- Target is inside global plot
 					Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
 					Max = globalPlotGround.Position
 						+ globalPlotGround.Size * Vector3.New(0.5, 0, 0.5)
-						+ Vector3.Up * 64,
+						+ Vector3.Up * 128,
 				})
 			then
 				Chat:UnicastMessage("[ERROR]: Move target is out of bounds.", Players.LocalPlayer)
@@ -1005,7 +1034,7 @@ Definitions.Import = {
 					Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
 					Max = globalPlotGround.Position
 						+ globalPlotGround.Size * Vector3.New(0.5, 0, 0.5)
-						+ Vector3.Up * 64,
+						+ Vector3.Up * 128,
 				})
 			then
 				Chat:UnicastMessage("[ERROR]: Import target is out of bounds.", Players.LocalPlayer)

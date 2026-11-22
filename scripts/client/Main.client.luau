@@ -163,7 +163,7 @@ Input.KeyDown:Connect(function(key: KeyCode, focused: boolean)
 					Min = globalPlotGround.Position - globalPlotGround.Size * Vector3.New(0.5, 0, 0.5),
 					Max = globalPlotGround.Position
 						+ globalPlotGround.Size * Vector3.New(0.5, 0, 0.5)
-						+ Vector3.Up * 64,
+						+ Vector3.Up * 128,
 				})
 			then
 				placementType = "global"
